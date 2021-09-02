@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,6 +13,21 @@
         <link href="img/logo/isotipo.png" rel="icon">
         <link href="img/logo/isotipo.png" rel="apple-touch-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+          
+          
+          <!-- datatables -->
+		          
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.jqueryui.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.7/css/rowReorder.jqueryui.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" />
+          
+          
           
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -43,178 +58,36 @@
                                 <i class="fas fa-table me-1"></i>
                                 Publicar 
                             </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>N°</th>
-                                            <th>Nombre Completo</th>
-                                            <th>Teléfono</th>
-                                            <th>DNI</th>
-                                            <th>Email</th>
-                                            <th>CV</th>
-                                            <th>Consolidado de Notas</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>N°</th>
-                                            <th>Nombre Completo</th>
-                                            <th>Teléfono</th>
-                                            <th>DNI</th>
-                                            <th>Email</th>
-                                            <th>CV</th>
-                                            <th>Consolidado de Notas</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Tiger Nixon</td>
-                                            <td>123456789</td>
-                                            <td>1234567</td>
-                                            <td>Nombre@gmail.com</td>
-                                            <td>cv</td>
-                                            <td>Consolidado</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
+                            <div>
+                            
+                            
+                                <table id="id_table" class="table table-hover table-dark table-striped text-center">
 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminará la información...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Garrett Winters</td>
-                                            <td>123456789</td>
-                                            <td>1234567</td>
-                                            <td>Nombre@gmail.com</td>
-                                            <td>cv</td>
-                                            <td>Consolidado</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminará la información...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Ashton Cox</td>
-                                            <td>123456789</td>
-                                            <td>1234567</td>
-                                            <td>Nombre@gmail.com</td>
-                                            <td>cv</td>
-                                            <td>Consolidado</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminará la información...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Cedric Kelly</td>
-                                            <td>123456789</td>
-                                            <td>1234567</td>
-                                            <td>Nombre@gmail.com</td>
-                                            <td>cv</td>
-                                            <td>Consolidado</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminará la información...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                    </tbody>
+                                    
+			<thead class="table-dark">
+				<tr class="text-center">
+					
+					<th style="width: 10%">ID</th>
+					<th style="width: 25%">Nombre Completo</th>
+					<th style="width: 5%">Tel�fono</th>
+					<th style="width: 5%">DNI</th>
+					<th style="width: 20%">Email</th>
+					<th style="width: 15%">CV</th>
+					<th style="width: 25%">Consolidado de Notas</th>
+					<th style="width: 5%">Estado</th>		
+					<th style="width: 10%">Editar</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+			
+			
+			
+			
+			
+			</tbody>
+                                    
+                                    
                                 </table>
                             </div>
                         </div>
@@ -222,10 +95,182 @@
                 </main>
             </div>
         </div>
+        
+        <!-- Estado del postulante -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Editar Estado del Postulante</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding-bottom:100px;">
+      
+      <form id="id_form_actualiza" action="">
+      
+      <input class="form-control" id="id_ID" name="idPostulante" type="hidden" maxlength="8"/>
+      
+      
+      <div class="form-group col-md-12">
+        <label class="control-label" for="id_estado">Estado</label>
+					<select id="id_estado" name="estado" class='form-control'>
+						<option value=" ">[Seleccione]</option>
+						<!-- <option value="1">Activo</option> 
+						<option value="0">Inactivo</option> -->
+						<option value="0">Pendiente</option>
+						<option value="1">Rechazado</option>
+						<option value="2">Aceptado</option>
+						     
+					</select>
+	  </div>
+	  </form>
+	  
+	  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="id_btn_actualiza">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        
+        
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+        
+        
+        
+        
+        <!-- listado de los datos a la tabla -->
+        
+<script type="text/javascript">
+
+
+window.onload=function listar(){
+	$.getJSON("listaPostulante", function (listado){
+		agregarGrilla(listado);
+	});
+	
+}
+
+
+
+
+$("#id_btn_actualiza").click(function(){
+	var ide = $('#id_ID').val();
+	var est = $('#id_estado').val();
+	
+        $.ajax({
+          type: "POST",
+          url: "actualizaEstadoPostulante", 
+          data: {idPostulante:ide, estado: est},
+          success: function(data){
+        	  agregarGrilla(data.lista);
+        	  $('#exampleModal').modal("hide");
+          },
+          error: function(){
+        	  mostrarMensaje(MSG_ERROR);
+          }
+        });
+        
+    
+});
+
+
+function editar(id,estado){	
+	$('#id_ID').val(id);
+	$('#id_estado').val(estado);
+	$('#exampleModal').modal("show");
+}
+
+
+function agregarGrilla(lista){
+	 $('#id_table').DataTable().clear();
+	 $('#id_table').DataTable().destroy();
+	 $('#id_table').DataTable({
+			data: lista,
+			searching: false,
+			ordering: true,
+			processing: false,
+			responsive: true,
+			pageLength: 5,
+			lengthChange: false,
+			language: {
+		        "decimal": "",
+		        "emptyTable": "No hay informaci�n",
+		        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+		        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+		        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+		        "infoPostFix": "",
+		        "thousands": ",",
+		        "lengthMenu": "Mostrar _MENU_ Entradas",
+		        "loadingRecords": "Cargando...",
+		        "processing": "Procesando...",
+		        "search": "Buscar:",
+		        "zeroRecords": "Sin resultados encontrados",
+		        "paginate": {
+		            "first": "Primero",
+		            "last": "Ultimo",
+		            "next": "Siguiente",
+		            "previous": "Anterior"
+		        }
+		    },
+			 
+			columns:[
+				{data: "idPostulante"},
+				{data: "nombre"},
+				{data: "telefono"},
+				{data: "dni"},
+				{data: "email"},
+				{data: function(row, type, val, meta){
+					console.log(row.cvPDF)
+					var salida="<a href="+row.cvPDF+" download="+row.nameCvPDF+"><g>"+row.nameCvPDF+"</g></a>";
+					
+				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
+					return salida;
+				},className:'table-sm m-5 table-borderless  caption-top'},	
+				{data: function(row, type, val, meta){
+					let nombre = row.nameConsolidadoNotaPDF;
+					var salida="<a href="+row.consolidadoNotaPDF+" target='_blank' download='"+row.nameConsolidadoNotaPDF+"'><g>"+row.nameConsolidadoNotaPDF+"</g></a>";
+					
+				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
+					return salida;
+				},className:'table-sm m-5 table-borderless  caption-top'},	
+				{data: "nombreEstado"},
+				{data: function(row, type, val, meta){
+					var salida='<button class="table-btn-crud" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editar(\''+row.idPostulante + '\',\'' + row.estado +'\')" ><i id="icon-editar" class="icon-crud"></i></button>';
+					
+				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
+					return salida;
+				},className:'table-sm m-5 table-borderless  caption-top'},													
+			]                                     
+	    });
+	 
+	 
+	 $('#id_table').removeClass('dataTable');
+	 //$('#id_table').removeClass('dataTable');
+	 
+	 $("#id_table").removeAttr("style");
+	 
+	
+}
+
+
+
+
+
+
+
+
+</script>
+        
+        
     </body>
 </html>

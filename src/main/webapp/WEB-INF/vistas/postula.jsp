@@ -30,6 +30,7 @@
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrapValidator.css"/>
 
   <!-- Template Main CSS File -->
   <link href="css/postula.css" rel="stylesheet">
@@ -158,17 +159,6 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-
-
-  <!-- Vendor JS Files -->
-  
-  
-
-
-  
-  
-  <!-- js que supuestamente no sirve -->
-  <!-- <script src="js/scriptCarga.js"></script> -->
   
   
   <!-- a programar osea copiar y pegar xd -->
@@ -253,9 +243,6 @@
 				  
 				  formData.append("nameCvPDF", nameCV);
 				  formData.append("nameConsolidadoNotaPDF", nameConsolidado);
-				  
-				  console.log($("#id_nombre").val());
-				  console.log(formData);
 				 
 				  
 				
@@ -296,8 +283,8 @@
 			$("#idNotas").val('');	
 			
 			//--- NOMBRES ----
-			document.getElementById('nombre_cv').innerHTML = '';
-		    document.getElementById('nombre_consolidado').innerHTML = '';
+			document.getElementById('nombre_cv').innerHTML = 'Adjuntar CV';
+		    document.getElementById('nombre_consolidado').innerHTML = 'Consolidado de Notas';
 		}
 	
 	
