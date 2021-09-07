@@ -28,6 +28,8 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" />
           
           
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+          
           
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -61,13 +63,13 @@
                             <div>
                             
                             
-                                <table id="id_table" class="table table-hover table-dark table-striped text-center">
+                                <table id="id_table" class="table table-hover table-light table-striped table-bordered text-center ">
 
                                     
 			<thead class="table-dark">
 				<tr class="text-center">
 					
-					<th style="width: 10%">ID</th>
+					<th style="width: 10%">N°</th>
 					<th style="width: 25%">Nombre Completo</th>
 					<th style="width: 5%">Teléfono</th>
 					<th style="width: 5%">DNI</th>
@@ -161,8 +163,6 @@ window.onload=function listar(){
 }
 
 
-
-
 $("#id_btn_actualiza").click(function(){
 	var ide = $('#id_ID').val();
 	var est = $('#id_estado').val();
@@ -245,7 +245,7 @@ function agregarGrilla(lista){
 				},className:'table-sm m-5 table-borderless  caption-top'},	
 				{data: "nombreEstado"},
 				{data: function(row, type, val, meta){
-					var salida='<button class="table-btn-crud" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editar(\''+row.idPostulante + '\',\'' + row.estado +'\')" ><i id="icon-editar" class="icon-crud"></i></button>';
+					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editar(\''+row.idPostulante + '\',\'' + row.estado +'\')" ><i class="bi bi-pencil"></i></button>';
 					
 				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
 					return salida;
@@ -261,10 +261,6 @@ function agregarGrilla(lista){
 	 
 	
 }
-
-
-
-
 
 
 

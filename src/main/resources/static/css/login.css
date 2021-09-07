@@ -5453,7 +5453,7 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 800px;/*CAMBIADO PARA EL MODAL DE EDITAR, ANTES ESTABA CON 500 PX*/
     margin: 1.75rem auto;
   }
 
@@ -11383,9 +11383,28 @@ g{
 }
 
 
+#botoneditar{
+	border:none;
+	background-color: rgba(0, 0, 0, 0.0);
+}
 
 .help-block{
 	
 	color:red !important;
+}
+
+
+/*input*/
+
+#file-input{
+	width:0px;
+	height:0px;
+	position:absolute;
+	z-index:-99999;
+	
+}
+
+label svg{
+	cursor: pointer;
 }
 
