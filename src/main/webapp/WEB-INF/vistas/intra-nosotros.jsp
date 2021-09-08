@@ -73,8 +73,21 @@
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Publicar 
+                                <div class="row" >
+                               		<div class="col-md-6">
+                               		<p class="mb-0 mt-2">
+                               		 <i class="fas fa-table me-1"></i>
+                                	Publicar 
+                                	</p>
+                               		</div>
+                               		<div class="col-md-6 input-group w-50">
+	                               		 	<input id="id_txt_filtro" name="filtro" class="form-control" placeholder="ingrese el nombre"  />
+	                               		 
+	                               		 <button class="btn btn-secondary" id="id_btn_filtrar">
+	                               		 		<i class="bi bi-search"></i>
+	                               		 	</button>
+                               		</div>
+                               </div>
                             </div>
                             <div class="card-body">
                                 
@@ -214,6 +227,15 @@
         	});
         	
         }
+        
+      //FILTRAR POR NOMBRE
+
+        $("#id_btn_filtrar").click(function(){
+        	var fil=$("#id_txt_filtro").val();
+        	$.getJSON("listaNosotrosxNombre",{"filtro":fil}, function (lista){
+        		agregarGrilla(lista);
+        	});
+        });
         
         $.ajax({
             type: "GET",

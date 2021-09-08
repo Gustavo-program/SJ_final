@@ -30,6 +30,13 @@ public class NosotrosController {
 		return nosotrosService.listaNosotros();
 	}
 	
+	
+	@ResponseBody
+	@RequestMapping("/listaNosotrosxNombre")
+	public List<Nosotros> lista(String filtro) {
+		return nosotrosService.listaNosotrosPorNombreLike(filtro.trim() + "%");
+	}
+	
 	//REGISTRO DE OBJETO NOSOTROS
 	@ResponseBody
 	@RequestMapping(value = "/insertaNosotros", method = RequestMethod.POST)

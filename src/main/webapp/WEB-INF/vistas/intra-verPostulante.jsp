@@ -57,8 +57,21 @@
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Publicar 
+                               <div class="row" >
+                               		<div class="col-md-6">
+                               		<p class="mb-0 mt-2">
+                               		 <i class="fas fa-table me-1"></i>
+                                	Publicar 
+                                	</p>
+                               		</div>
+                               		<div class="col-md-6 input-group w-50">
+	                               		 	<input id="id_txt_filtro" name="filtro" class="form-control" placeholder="ingrese el nombre"  />
+	                               		 
+	                               		 <button class="btn btn-secondary" id="id_btn_filtrar">
+	                               		 		<i class="bi bi-search"></i>
+	                               		 	</button>
+                               		</div>
+                               </div>
                             </div>
                             <div>
                             
@@ -113,7 +126,11 @@
       
       <input class="form-control" id="id_ID" name="idPostulante" type="hidden" maxlength="8"/>
       
-      
+      <div class="form-group col-md-12">
+        <label class="control-label" for="id_nombre">Nombre del postulante</label>
+					<input class="form-control" id="id_nombre" name="nombre" readonly/>
+	  </div>
+	  
       <div class="form-group col-md-12">
         <label class="control-label" for="id_estado">Estado</label>
 					<select id="id_estado" name="estado" class='form-control'>
@@ -126,6 +143,7 @@
 						     
 					</select>
 	  </div>
+	  
 	  </form>
 	  
 	  
@@ -162,15 +180,25 @@ window.onload=function listar(){
 	
 }
 
+//FILTRAR POR NOMBRE
+
+$("#id_btn_filtrar").click(function(){
+	var fil=$("#id_txt_filtro").val();
+	$.getJSON("listaPostulantexNombre",{"filtro":fil}, function (lista){
+		agregarGrilla(lista);
+	});
+});
+
 
 $("#id_btn_actualiza").click(function(){
 	var ide = $('#id_ID').val();
 	var est = $('#id_estado').val();
+	var nom = $('#id_nombre').val();
 	
         $.ajax({
           type: "POST",
           url: "actualizaEstadoPostulante", 
-          data: {idPostulante:ide, estado: est},
+          data: {idPostulante:ide, estado: est, nombre:nom},
           success: function(data){
         	  agregarGrilla(data.lista);
         	  $('#exampleModal').modal("hide");
@@ -184,9 +212,11 @@ $("#id_btn_actualiza").click(function(){
 });
 
 
-function editar(id,estado){	
+
+function editar(id,estado,nombre){	
 	$('#id_ID').val(id);
 	$('#id_estado').val(estado);
+	$('#id_nombre').val(nombre);
 	$('#exampleModal').modal("show");
 }
 
@@ -245,7 +275,7 @@ function agregarGrilla(lista){
 				},className:'table-sm m-5 table-borderless  caption-top'},	
 				{data: "nombreEstado"},
 				{data: function(row, type, val, meta){
-					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editar(\''+row.idPostulante + '\',\'' + row.estado +'\')" ><i class="bi bi-pencil"></i></button>';
+					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editar(\''+row.idPostulante + '\',\'' + row.estado +'\',\'' + row.nombre +'\')" ><i class="bi bi-pencil"></i></button>';
 					
 				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
 					return salida;
