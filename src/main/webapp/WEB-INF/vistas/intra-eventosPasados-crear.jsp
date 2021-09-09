@@ -175,11 +175,11 @@
 		$("#id_registrar").click(function(e){
     		e.preventDefault();
     		
-    		//var validator = $('#form-reg').data('bootstrapValidator');
-    		//validator.validate();
+    		var validator = $('#form-reg').data('bootstrapValidator');
+    		validator.validate();
     		
     		
-    		//if (validator.isValid()){	
+    		if (validator.isValid()){	
     		  var formData=new FormData();
     		  
     		  //var file = $('#file-input')[0].files[0];
@@ -206,18 +206,101 @@
     	        	mostrarMensaje(data.MENSAJE);
     	        	
     	        	
-    	        	//validator.resetForm();
+    	        	validator.resetForm();
     	        },
     	        error: function(){
     	        	mostrarMensaje(MSG_ERROR);
     	        }
     	      });
     	      
-    		//return false;	
+    		return false;	
     		
-    		//};
+    		};
     		return false;
     	});
+		
+		
+		
+		
+		
+		
+		
+		//VALIDACIONES REGISTRAR
+		
+		
+		
+		$('#form-reg').bootstrapValidator({
+    	  message: 'This value is not valid',
+    	  feedbackIcons: {
+    	      valid: 'glyphicon glyphicon-ok',
+    	      invalid: 'glyphicon glyphicon-remove',
+    	      validating: 'glyphicon glyphicon-refresh'
+    	  },
+    	  fields: {
+    	  	titulo: {
+    	  		selector : '#id_titulo',
+    	          validators: {
+    	              notEmpty: {
+    	                  message: 'El título es un campo obligatorio'
+    	              },
+    	              stringLength :{
+    	              	message:'El título es de 2 a 100 caracteres',
+    	              	min : 2,
+    	              	max : 100
+    	              }
+    	          }
+    	      },
+    	      
+    	      descripcion: {
+    	  		selector : '#id_descripcion',
+    	          validators: {
+    	              notEmpty: {
+    	                  message: 'La descripción es un campo obligatorio'
+    	              },
+    	              stringLength :{
+    	              	message:'La descripcion es de 3 a 300 caracteres',
+    	              	min : 3,
+    	              	max : 300
+    	              }
+    	          }
+    	      },
+    	      
+    	      fecha: {
+					selector: '#id_fecha',
+					validators: {
+						notEmpty: {
+							message: '*Seleccione la fecha de publicación'
+						},
+					}
+				},
+    	      
+    	      rama: {
+					selector: '#id_rama',
+					validators: {
+						notEmpty: {
+							message: '* Elija una opción'
+						},
+					}
+				},
+    	      foto: {
+    	  		selector : '#file-input',
+    	          validators: {
+    	              notEmpty: {
+    	                  message: 'La foto es un campo obligatorio'
+    	              },
+    	              file: {
+    	              	extension: 'png,jpg,jpeg',
+    	              	type: 'image/jpeg,image/png,image/jpg',
+    	              	maxSize: 2*1024*1024,                	
+    	             		message: 'La foto es de formato jpg, jpeg o png de máximo 2MB'
+    	           		}
+    	          }
+    	      }
+    	    
+    	     
+    	  }   
+    	});
+		
 		
 		</script>
         

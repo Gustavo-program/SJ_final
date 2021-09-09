@@ -303,7 +303,7 @@
       	  //limpiarFormulario();
       	  validator.resetForm();
       	  
-      	$('#exampleModal').modal("hide");
+      	$('#id_modal_actualiza').modal("hide");
         },
         error: function(){
       	  mostrarMensaje(MSG_ERROR);
@@ -328,7 +328,7 @@
     		document.getElementById('foto_nosotros').setAttribute('src',foto);
     		
     		
-    		$('#exampleModal').modal("show");
+    		$('#id_modal_actualiza').modal("show");
 
     	}
     	
