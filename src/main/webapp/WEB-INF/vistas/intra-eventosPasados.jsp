@@ -144,7 +144,15 @@
 	        	
 	        }
 		
-		
+	    	
+	    	
+	    	 $("#id_btn_filtrar").click(function(){
+        	var fil=$("#id_txt_filtro").val();
+        	$.getJSON("listaEventosPasadosxTitulo",{"filtro":fil}, function (lista){
+        		agregarGrilla(lista);
+        	});
+        });
+	    	
 		
 		function agregarGrilla(lista){
 	       	 $('#id_table').DataTable().clear();
@@ -191,7 +199,7 @@
 	    				},className:'text-center'},
 	       				
 	       				{data: function(row, type, val, meta){
-	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idNosotros + '\',\'' + row.nombre + '\',\'' + row.descripcion+ '\',\'' +row.sexo+ '\',\'' +row.tipoNosotros.idTipoNosotros+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
+	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idEventosNosotros + '\',\'' + row.titulo + '\',\'' + row.descripcion+ '\',\'' +row.fecha+ '\',\'' +row.rama.idRama+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
 	       					
 	       				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
 	       					return salida;

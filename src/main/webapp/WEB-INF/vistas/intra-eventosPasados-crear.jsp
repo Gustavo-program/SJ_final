@@ -108,7 +108,7 @@
                                                 <input type="text" class="form-control" name="titulo" id="id_titulo" placeholder="Título" required>
                                               </div>
                                               <div class="form-group mt-3">
-                                                <textarea class="form-control" name="descripcion" rows="5" placeholder="Descripción" required></textarea>
+                                                <textarea class="form-control" id="id_descripcion"name="descripcion" rows="5" placeholder="Descripción" required></textarea>
                                               </div>
                                               <br>
                                               <div class="row">
@@ -124,8 +124,8 @@
                                                   </div>
                                               </div>
                                               <div class="b3">
-                                                <button type="button" class="btn btn-secondary">Cancelar</button>
-                                                <button type="submit" class="btn btn-primary">Guardar</button>    
+                                                <button type="button" class="btn btn-secondary" id="id_cancelar">Cancelar</button>
+                                                <button type="submit" class="btn btn-primary" id="id_registrar">Guardar</button>    
                                               </div>
                                       </div>
                                     </div>
@@ -169,6 +169,55 @@
             	})
             }
     });
+		
+		
+		
+		$("#id_registrar").click(function(e){
+    		e.preventDefault();
+    		
+    		//var validator = $('#form-reg').data('bootstrapValidator');
+    		//validator.validate();
+    		
+    		
+    		//if (validator.isValid()){	
+    		  var formData=new FormData();
+    		  
+    		  //var file = $('#file-input')[0].files[0];
+    		  
+    		  
+    		  let foto = document.getElementById('foto_eventos');	            
+    	      var file =  foto.getAttribute("src");
+    		  
+    		  formData.append("foto", file);
+    		  formData.append("titulo", $("#id_titulo").val());
+    		  formData.append("descripcion", $("#id_descripcion").val());
+    		  formData.append("fecha", $("#id_fecha").val());
+    		  formData.append("rama", $("#id_rama").val());
+    		  
+    	      $.ajax({
+    	        type: "POST",
+    	        url: "insertaEventosPasados", 
+    	        data: formData,
+    	       // enctype: 'multipart/form-data',
+    	        contentType: false,
+    	        processData: false,
+    	        cache: false,
+    	        success: function(data){
+    	        	mostrarMensaje(data.MENSAJE);
+    	        	
+    	        	
+    	        	//validator.resetForm();
+    	        },
+    	        error: function(){
+    	        	mostrarMensaje(MSG_ERROR);
+    	        }
+    	      });
+    	      
+    		//return false;	
+    		
+    		//};
+    		return false;
+    	});
 		
 		</script>
         

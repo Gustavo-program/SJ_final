@@ -237,7 +237,7 @@
     		$("#id_reg_descripcion").val('');	
     		$("#id_reg_sexo").val(' ');
     		$("#id_reg_tipo").val(' ');
-    		$("#file-input").attr('src','img/img2.jpg');		
+    		$("#file-input").attr('src','img/img_nosotros.jpg');		
     		
     		
     	}
