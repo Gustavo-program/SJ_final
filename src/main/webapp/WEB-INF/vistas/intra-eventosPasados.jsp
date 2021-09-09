@@ -14,7 +14,35 @@
         <link href="img/logo/isotipo.png" rel="apple-touch-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
           
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        
+        
+      
+        <!-- datatables -->
+		          
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.jqueryui.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.7/css/rowReorder.jqueryui.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" />
+          
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        
+        
+        <script type="text/javascript" src="js/global.js"></script>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+        
+        
+        
     </head>
     <body class="sb-nav-fixed">
         
@@ -46,174 +74,148 @@
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Publicar 
+                                 <div class="row" >
+                               		<div class="col-md-6">
+                               		<p class="mb-0 mt-2">
+                               		 <i class="fas fa-table me-1"></i>
+                                	Publicar 
+                                	</p>
+                               		</div>
+                               		<div class="col-md-6 input-group w-50">
+	                               		 	<input id="id_txt_filtro" name="filtro" class="form-control" placeholder="Ingrese el t�tulo del evento"  />
+	                               		 
+	                               		 <button class="btn btn-secondary" id="id_btn_filtrar">
+	                               		 		<i class="bi bi-search"></i>
+	                               		 	</button>
+                               		</div>
+                               </div> 
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>Nombre de documento</th>
-                                            <th>Fecha y hora del evento</th>
-                                            <th>Rama</th>
-                                            <th>Publicado</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Nombre de documento</th>
-                                            <th>Fecha y hora del evento</th>
-                                            <th>Rama</th>
-                                            <th>Publicado</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>28 de Junio 2021</td>
-                                            <td>Derecho Civil</td>
-                                            <td>25/09/2021 - 10:00</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
+                               
+                               <table id="id_table" class="table table-hover table-light table-striped text-center table-bordered">
 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminará la información...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>28 de Junio 2021</td>
-                                            <td>Derecho Penal</td>
-                                            <td>25/09/2021 - 12:30</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminará la información...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>28 de Junio 2021</td>
-                                            <td>Derecho Penal</td>
-                                            <td>25/09/2021 - 19:00</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminará la información...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>28 de Junio 2021</td>
-                                            <td>Derecho Civil</td>
-                                            <td>25/09/2021 - 16:00</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminará la información...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    
+						<thead class="table-dark">
+							<tr class="text-center">
+					
+								<th style="width: 5%">ID</th>
+								<th style="width: 20%">T�tulo</th>
+								<th style="width: 25%">Descripci�n</th>
+								<th style="width: 10%">Fecha</th>
+								<th style="width: 10%">Rama</th>
+								<th style="width: 10%">Foto</th>
+								<th style="width: 5%">Editar</th>
+								<th style="width: 5%">Eliminar</th>		
+								
+							</tr>
+						</thead>
+						<tbody>
+						
+						
+						
+						
+						</tbody>
+                                    
+					</table>
                             </div>
                         </div>
                     </div>
                 </main>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        
+          <!-- SCRIPT PARA LA FOTO -->
+		<script type="text/javascript" src="js/modal-foto.js"></script>
+        
+             <!-- VALIDACIONES Y JQUERY -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrapValidator.js"></script>
+		<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+		
+		
+		
+		<script type="text/javascript">
+		
+		
+		 window.onload=function listar(){
+	        	$.getJSON("listaEventosPasados", function (listado){
+	        		agregarGrilla(listado);
+	        	});
+	        	
+	        }
+		
+		
+		
+		function agregarGrilla(lista){
+	       	 $('#id_table').DataTable().clear();
+	       	 $('#id_table').DataTable().destroy();
+	       	 $('#id_table').DataTable({
+	       			data: lista,
+	       			searching: false,
+	       			ordering: true,
+	       			processing: false,
+	       			responsive: true,
+	       			pageLength: 5,
+	       			lengthChange: false,
+	       			language: {
+	       		        "decimal": "",
+	       		        "emptyTable": "No hay informaci�n",
+	       		        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+	       		        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+	       		        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+	       		        "infoPostFix": "",
+	       		        "thousands": ",",
+	       		        "lengthMenu": "Mostrar _MENU_ Entradas",
+	       		        "loadingRecords": "Cargando...",
+	       		        "processing": "Procesando...",
+	       		        "search": "Buscar:",
+	       		        "zeroRecords": "Sin resultados encontrados",
+	       		        "paginate": {
+	       		            "first": "Primero",
+	       		            "last": "Ultimo",
+	       		            "next": "Siguiente",
+	       		            "previous": "Anterior"
+	       		        }
+	       		    },
+	       			 
+	       			columns:[
+	       				{data: "idEventosPasados"},
+	       				{data: "titulo"},
+	       				{data: "descripcion"},
+	       				{data: "fecha"},
+	       				{data: "rama.nombre"},
+	       				{data: function(row, type, val, meta){
+	    					
+	    					var salida='<img width=70px height=70px src='+row.foto+'>';
+	    					return salida;
+	    				},className:'text-center'},
+	       				
+	       				{data: function(row, type, val, meta){
+	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idNosotros + '\',\'' + row.nombre + '\',\'' + row.descripcion+ '\',\'' +row.sexo+ '\',\'' +row.tipoNosotros.idTipoNosotros+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
+	       					
+	       				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
+	       					return salida;
+	       				},className:'table-sm m-5 table-borderless  caption-top'},
+	       				{data: function(row, type, val, meta){
+	       					var salida='<button class="table-btn-crud" id="botoneditar"  onclick="eliminar(\''+row.idNosotros +'\')" ><i class="bi bi-trash"></i></button>';
+	       					
+	       				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
+	       					return salida;
+	       				},className:'table-sm m-5 table-borderless  caption-top'},	
+	       				
+	       			]                                     
+	       	    });
+	       	 
+	       	 
+	       	 $('#id_table').removeClass('dataTable');
+	       	 //$('#id_table').removeClass('dataTable');
+	       	 
+	       	 $("#id_table").removeAttr("style");
+	       	 
+	       	
+	       }
+		
+		</script>
+        
     </body>
 </html>
