@@ -124,8 +124,8 @@
                                                   </div>
                                               </div>
                                               <div class="b3">
-                                                <button type="button" class="btn btn-secondary" id="id_cancelar">Cancelar</button>
-                                                <button type="submit" class="btn btn-primary" id="id_registrar">Guardar</button>    
+                                                <a href="verIntraEventosPasados"><button type="button" class="btn btn-secondary" id="id_cancelar">Cancelar</button></a>   
+                                                <button type="submit" class="btn btn-primary" id="id_registrar">Guardar</button> 
                                               </div>
                                       </div>
                                     </div>
@@ -204,9 +204,9 @@
     	        cache: false,
     	        success: function(data){
     	        	mostrarMensaje(data.MENSAJE);
-    	        	
-    	        	
+    	        	limpiar();
     	        	validator.resetForm();
+    	        	//location.href="verIntraEventosPasados";
     	        },
     	        error: function(){
     	        	mostrarMensaje(MSG_ERROR);
@@ -220,7 +220,18 @@
     	});
 		
 		
-		
+function limpiar(){				
+
+    		
+    		$("#id_titulo").val('');
+    		$("#id_descripcion").val('');	
+    		$("#id_fecha").val(' ');
+    		$("#id_rama").val(' ');
+    		$("#foto_eventos").attr('src','img/img_eventos.jpg');		
+    		$('#file-input').val('');
+    		$('#fichero').html('');
+    		
+    	}
 		
 		
 		

@@ -92,7 +92,9 @@
                             </div>
                             <div class="card-body">
                                
-                               <table id="id_table" class="table table-hover table-light table-striped text-center table-bordered">
+                               
+                               
+						<table id="id_table" class="table table-hover table-light table-striped text-center table-bordered">
 
                                     
 						<thead class="table-dark">
@@ -317,7 +319,7 @@
 	    	});
 	    	        
 	    	    	 
-	    	        <!-- EDITAR DATOS DE NOSOTROS -->
+	    	        <!-- EDITAR DATOS DE EVENTOS -->
 	    	    	function editar(id,nombre,descripcion,fecha,rama,foto){	
 	    	    		
 	    	    		$('#id').val(id);

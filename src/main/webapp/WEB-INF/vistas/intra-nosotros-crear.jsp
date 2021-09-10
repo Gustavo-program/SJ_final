@@ -213,7 +213,7 @@
     	        success: function(data){
     	        	mostrarMensaje(data.MENSAJE);
     	        	
-    	        	
+    	        	limpiar();
     	        	validator.resetForm();
     	        },
     	        error: function(){
@@ -237,8 +237,9 @@
     		$("#id_reg_descripcion").val('');	
     		$("#id_reg_sexo").val(' ');
     		$("#id_reg_tipo").val(' ');
-    		$("#file-input").attr('src','img/img_nosotros.jpg');		
-    		
+    		$("#foto_nosotros").attr('src','img/img_nosotros.jpg');		
+    		$('#file-input').val('');
+    		$('#fichero').html('');
     		
     	}
     	
