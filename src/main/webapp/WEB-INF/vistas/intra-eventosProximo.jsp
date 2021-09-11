@@ -345,6 +345,35 @@
 	    	    		$('#id_modal_actualiza').modal("show");
 
 	    	    	}
+	    	    	
+	    	    	
+	    	    	
+					//ELIMINAR
+	    	    	
+	    	    	function eliminar(id){	
+	    	    		mostrarMensajeConfirmacion(MSG_ELIMINAR, accionEliminar,null,id);
+	    	    	}
+	    	    	
+	    	    	
+	    	    	function accionEliminar(id){	
+	    	    		  $.ajax({
+	    	    		        type: "POST",
+	    	    		        url: "eliminaEventosProximos", 
+	    	    		        data: {"id":id},
+	    	    		        success: function(data){
+	    	    		      	  agregarGrilla(data.lista);
+	    	    		      	  mostrarMensaje(data.mensaje);
+	    	    		        },
+	    	    		        error: function(){
+	    	    		      	  mostrarMensaje(MSG_ERROR);
+	    	    		        }
+	    	    		   });
+	    	    		}	    	    	
+	    	    	
+
+	    	    	
+	    
+	    
 		
 		function agregarGrilla(lista){
 	       	 $('#id_table').DataTable().clear();
@@ -405,7 +434,7 @@
 	       					return salida;
 	       				},className:'table-sm m-5 table-borderless  caption-top'},
 	       				{data: function(row, type, val, meta){
-	       					var salida='<button class="table-btn-crud" id="botoneditar"  onclick="eliminar(\''+row.idEventosPasados +'\')" ><i class="bi bi-trash"></i></button>';
+	       					var salida='<button class="table-btn-crud" id="botoneditar"  onclick="eliminar(\''+row.idEventosProximos+'\')" ><i class="bi bi-trash"></i></button>';
 	       					
 	       				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
 	       					return salida;
@@ -422,6 +451,18 @@
 	       	 
 	       	
 	       }
+		
+		
+		
+		 //AL CERRAR EL MODAL REINICIA LAS VALIDACIONES
+        $('#id_modal_actualiza').on('hide.bs.modal', function (e) {
+        	var validator = $('#form-act').data('bootstrapValidator');
+          	validator.validate();
+        	
+            validator.resetForm();
+        	
+        });  
+		
 		
 		
 /*VALIDACIONES PARA ACTUALIZAR*/

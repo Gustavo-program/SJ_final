@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -142,6 +143,40 @@ public class EventosProximosController {
 			
 			return salida;
 			
+		}
+		
+		
+		
+
+		//ELIMINAR OBJETO EVENTOS
+		
+		@ResponseBody
+		@RequestMapping("eliminaEventosProximos")
+		public Map<String, Object> eliminaEventosProximos(int id){
+			Map<String, Object> salida=new HashMap<String, Object>();
+			
+			try {
+				Optional<EventosProximos> opt= eventProxService.obtienePorId(id);
+				if(opt.isPresent()) {
+					eventProxService.eliminaEventosProximos(id);
+					salida.put("mensaje", "Eliminación Exitosa");
+					
+				}
+				else {
+					salida.put("mensaje", "Eliminación Errónea");
+				}
+					
+			} 		
+			catch (Exception e) {
+				e.printStackTrace();
+				salida.put("mensaje", "Se generó un error");
+			}
+			finally {
+				List<EventosProximos> lista=eventProxService.listaEventosProximos();
+				salida.put("lista", lista);	
+			}
+				
+			return salida;
 		}
 		
 	
