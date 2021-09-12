@@ -33,7 +33,7 @@ public class EventosPasadosController {
 	@ResponseBody
 	@RequestMapping("/listaEventosPasadosxTitulo")
 	public List<EventosPasados> lista(String filtro) {
-		return eventPasService.listaEventosPasadosPorTitulo(filtro.trim() + "%");
+		return eventPasService.listaEventosPasadosPorTitulo("%"+filtro.trim() + "%");
 	}
 	
 	

@@ -32,7 +32,7 @@ public class PostulanteController {
 	@ResponseBody
 	@RequestMapping("/listaPostulantexNombre")
 	public List<Postulantes> lista(String filtro) {
-		return postulanteService.listaPostulantePorNombreLike(filtro.trim() + "%");
+		return postulanteService.listaPostulantePorNombreLike("%"+filtro.trim() + "%");
 	}
 	
 	

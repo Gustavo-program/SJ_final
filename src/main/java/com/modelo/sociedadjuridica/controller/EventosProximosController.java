@@ -33,7 +33,7 @@ public class EventosProximosController {
 	@ResponseBody
 	@RequestMapping("/listaEventosProximosxTitulo")
 	public List<EventosProximos> lista(String filtro) {
-		return eventProxService.listaEventosProximosPorTitulo(filtro.trim() + "%");
+		return eventProxService.listaEventosProximosPorTitulo("%"+filtro.trim() + "%");
 	}
 	
 	
