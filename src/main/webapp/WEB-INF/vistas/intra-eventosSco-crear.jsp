@@ -129,7 +129,7 @@
                                                   </div>
                                               </div>
                                               <div class="b3">
-                                                <button type="button" class="btn btn-secondary">Cancelar</button>
+                                                <a href="verIntraEventosSCO"><button type="button" class="btn btn-secondary">Cancelar</button></a>  
                                                 <button type="submit" class="btn btn-primary" id="id_registrar">Guardar</button>    
                                               </div>
                                           
