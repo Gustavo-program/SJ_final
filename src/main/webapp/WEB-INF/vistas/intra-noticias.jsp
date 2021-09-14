@@ -7,14 +7,46 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Intranet- Noticias</title>
+        
+        
+        
+        
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/login.css" rel="stylesheet" />
         <!-- Favicons -->
         <link href="img/logo/isotipo.png" rel="icon">
         <link href="img/logo/isotipo.png" rel="apple-touch-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        
+        
+      
+        <!-- datatables -->
+		          
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.jqueryui.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.7/css/rowReorder.jqueryui.min.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" />
           
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        
+        
+        <script type="text/javascript" src="js/global.js"></script>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+        
+        
+        
     </head>
     <body class="sb-nav-fixed">
         
@@ -43,169 +75,510 @@
                             </div>
                         </div>
                         <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Publicar 
+                              <div class="card-header">
+                                 <div class="row" >
+                               		<div class="col-md-6">
+                               		<p class="mb-0 mt-2">
+                               		 <i class="fas fa-table me-1"></i>
+                                	Publicar 
+                                	</p>
+                               		</div>
+                               		<div class="col-md-6 input-group w-50">
+	                               		 	<input id="id_txt_filtro" name="filtro" class="form-control" placeholder="Ingrese el título de la Noticia"  />
+	                               		 
+	                               		 <button class="btn btn-secondary" id="id_btn_filtrar">
+	                               		 		<i class="bi bi-search"></i>
+	                               		 	</button>
+                               		</div>
+                               </div> 
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>Nombre de documento</th>
-                                            <th>Ubicación</th>
-                                            <th>Publicado</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Nombre de documento</th>
-                                            <th>Ubicación</th>
-                                            <th>Publicado</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>Noticias Nacionales</td>
-                                            <td>25/09/2021 - 10:00</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
+                            
+                            
+                            
+                                
+                                <table id="id_table" class="table table-hover table-light table-striped text-center table-bordered">
 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Â¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminarÃ¡ la informaciÃ³n...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Noticias Internacional</td>
-                                            <td>25/09/2021 - 12:30</td>
-                                            <td><a href="verInicio"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Â¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminarÃ¡ la informaciÃ³n...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Noticias Nacionales</td>
-                                            <td>25/09/2021 - 19:00</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Â¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminarÃ¡ la informaciÃ³n...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Noticias Nacionales</td>
-                                            <td>25/09/2021 - 16:00</td>
-                                            <td><a href="inicio de sesion.html"><button type="button" class="btn btn-primary">
-                                                <i class="bi bi-camera"></i>
-                                            </button></a>
-                                                <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <i class="bi bi-x-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Â¿Estas seguro que deseas eliminar?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          Se eliminarÃ¡ la informaciÃ³n...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary">Aceptar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>                                        
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    
+						<thead class="table-dark">
+							<tr class="text-center">
+					
+								<th style="width: 5%">ID</th>
+								<th style="width: 15%">Título</th>
+								<th style="width: 15%">Descripción</th>
+								<th style="width: 15%">Fecha de Registro</th>
+								<th style="width: 10%">Tipo</th>
+								<th style="width: 15%">Rama</th>
+								<th style="width: 15%">Foto</th>
+								<th style="width: 5%">Editar</th>
+								<th style="width: 5%">Eliminar</th>		
+								
+							</tr>
+						</thead>
+						<tbody>
+						
+						
+						
+						
+						</tbody>
+                                    
+					</table>
+                                
+                                
+                                
                             </div>
                         </div>
                     </div>
                 </main>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        
+        
+        
+        
+          <!-- MODAL PARA ACTUALIZAR  -->
+        
+<div class="modal fade" id="id_modal_actualiza" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">EDITAR DATOS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding-bottom:25pxpx;">
+      
+      
+      
+        <form id="form-act" method="post" enctype="multipart/form-data">
+                        
+                        
+                            <div class="container-fluid px-4 d2">
+                                <div class="row">
+                                    
+                                     <div class="col-lg-4 col-md-6 portfolio-item">
+                                          <img src="img/img_noticias.jpg" id="foto_eventos" class="card-img-top" alt="...">
+                                        <label 
+											for="file-input" class="w-100 text-center"> <svg
+												xmlns="http://www.w3.org/2000/svg"
+												xmlns:xlink="http://www.w3.org/1999/xlink" width="60.048"
+												height="60.048" viewBox="0 0 1080 1080">
+						                        <image alt="Click aquÃ­ para subir tu foto"
+													title="Click aquÃ­ para subir tu foto" x="73" y="220" width="936"
+													height="640"
+													xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAkCAYAAADGrhlwAAAEXElEQVRYhd2Ze4xeQxjGf1uS1m41kRXqVht3VsUlaVPRVoWWuMU1IqoV9Q/LH4h/xB+CVEo0ITRIio1U2qoq61YRiUupa6JIbInWWpruqq5YglKZ5jnN03HO+c75vvPZ8CRf8s6ZmTPznJl532fer+Wx7h5SMAlYm1YR4UlgdvRsN6Af2LdA/6px66iMF55UcKATU55dOEJkAjp3z6gYNvsb4A0r7wPMlL01pe91Zn8GfFzBRPNwhHZUwE9ZhPrNfh7osnJY1T9lD0f99gKmW/ksoK95XHbgEmCZ7O2BUKdYOk41O2yr8618jNkHARdY+TKz3/8XyAS0eyEQ+rRGhynAsxl1RwHPZNTdXd/8SmMXP5DlFBrFthyiTYWfoe+BryoY7Dfg3pEgQ0ToKeCmJo51AjADOA7YG/gZ6AXeBt4EfqliECc0pooXpmCeXPnxOW02A48DC4AfGhnMz9CPjbwoBSG4vgY8WoMMim23AOuB8xoZ1FdoKnA5MABsUizaUud7j9RWao+eh5i2DvgOGCcvGULEBNWHOLZKK/pQo4Sm6ZdgWAP3ieAg8ArwYo13jk0h84gcxfqMOVwLzAda9exB4GvgpUYIxWgDDtcvwQ3AxBqxa1lEJkTyp3PaBxd/P/Cctughev6Ctu1AGUJ+hoLLfhX4PGiinD5H59RNkdxJMCciE1bvUuBm4JpIoWwAJps+bAHuK0MmJrRCorNTe/owDXB2FJ9i/eZwdRDOS7eVLwa+BJYC92gbfgE8YG0Go+vIFXIYdRHa0+whkXhPZ6aIJtsvOoOuus8BlmdcK7oi4j3Rlr6owNg74YRactrtUeBdrrLX2kcYHW274DkXKZgmmB31X2L2jAJj70SVWs5V+IdmzxQp5DUnyqtNkyNIMM/sj8zev8wkqiQ01uwhs/32u0KkEiww+2CzvU1bmUlUSegPs11GfWv25KjPLLP9I4wz+/cyk8iLQ2Wxwdp77PIszCTFqSVSCbdZ3SqzO80eLDOPKlfoLbNPs4+1SW46QQi0K6UMEoSPsdjKruf8PNZEUULbCrRZZ9urVWIzQbCfyOjXKz33l8oHKPYlyFMZ/0BRtT06p85xh9l3AR1Wngucq2vCB5I210t5bLR2y83+RL/C8DMUkiFXSyV0KAi26zJ2YEFyIfrfDoxX+XWdm0SP9URnKsbDkk8JunLapsIJzYq8ThaGatSHROMa2R3ainOk1LMwQWTOtPqFUfAtTSgPw9qSq6OkYxreUeBM7jNhpV+W8A2B9F2pheDajwVOB66MVj5kmW4sSyYm1C+PMqDAtlFZ0z4922oJxlpYpI+wWLnugDP0q4Vwxq6qh0xMaGnFSZJurcZ8bcNaCIf/zsgplEazkyS9UssnS3En1+02pbs2K8O6Wh+0YTihqpMkjjXmKKqGS6tdCE2vx02WwHatyq86i6PkCMbIzru+5GFqFqFT9Psvo7VZue2Rwo7/h0LC4tD/AZktwMK/AYg22ha43FwEAAAAAElFTkSuQmCC" />
+						                      </svg>
+										</label>
+                                        <div class="mb-3 text-center">
+                                            <label id="fichero" for="file-input" class="my-btn btn-danger"></label>
+                                            <input  class="form-control" id="file-input" type="file" name="foto"/>
+                                            <br>
+                                            <label>Subir maximo foto de 1MB</label>
+                                          </div>
+                                      </div>
+                                    
+                                    <div class="col-lg-8 col-md-6 portfolio-item">
+                                      <div class="card-body">
+                                       <input class="form-control" id="id" name="idNoticias" maxlength="8" type="hidden"/>	
+                                            <div class="form-group mt-3">
+                                                <input type="text" class="form-control" name="titulo" id="id_titulo" placeholder="Título" required>
+                                              </div>
+                                              <div class="form-group mt-3">
+                                                <textarea class="form-control" name="descripcion" id="id_descripcion" rows="5" placeholder="Descripción" required></textarea>
+                                              </div>
+                                              <br>
+                                              <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="inputState" class="form-label">Publicar en</label>
+                                                    <select name="tipo" id="id_tipo" class="form-select">
+                                                      <option selected value=" ">-- Elija un lugar --</option>
+                                                    </select>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="inputState" class="form-label">Rama</label>
+                                                    <select name="rama" id="id_rama" class="form-select">
+                                                      <option selected value=" ">-- Elija un lugar --</option>
+                                                    </select>
+                                                  </div>
+                                              </div>
+                                          
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            </form>
+      
+      
+	  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="id_btn_actualiza">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        
+        
+       
+        <!-- SCRIPT PARA LA FOTO -->
+		<script type="text/javascript" src="js/modal-foto.js"></script>
+        
+             <!-- VALIDACIONES Y JQUERY -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrapValidator.js"></script>
+		<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+		
+		
+		<!-- programando -->
+		
+		
+		
+		<script type="text/javascript">
+		
+		
+		
+		 window.onload=function listar(){
+	        	$.getJSON("listaNoticias", function (listado){
+	        		agregarGrilla(listado);
+	        	});
+	        	
+	        }
+		
+		 
+		 
+		 document.getElementById('file-input').addEventListener("change",function(e){
+	    	    let reader=new FileReader();
+	    	    reader.readAsDataURL(e.target.files[0]);
+	    	    reader.onload=function(){    
+	    	    	
+	    	            let foto = document.getElementById('foto_eventos');	            
+	    	            foto.setAttribute("src",reader.result);
+	    	    }
+	    	    
+	    	})
+	    	
+	    	
+	    	
+	    		
+	    	 $("#id_btn_filtrar").click(function(){
+        	var fil=$("#id_txt_filtro").val();
+        	$.getJSON("listaNoticiasxTitulo",{"filtro":fil}, function (lista){
+        		agregarGrilla(lista);
+        	});
+        });
+	    	
+		 
+		 
+		 
+		 
+		 $.ajax({
+	            type: "GET",
+	            url: "listaTipoNoticias",
+	            success: function(response)
+	            {
+	            	$.each(response, function(index,item){
+	            		//console.log("option: "+option)
+	            		$("#id_tipo").append("<option value='"+ item.idTipoNoticias +"'>"+ item.nombre+"</option>");
+	            	})
+	            }
+	    });
+	    	
+	    	 $.ajax({
+	            type: "GET",
+	            url: "listaRamas",
+	            success: function(response)
+	            {
+	            	$.each(response, function(index,item){
+	            		//console.log("option: "+option)
+	            		$("#id_rama").append("<option value='"+ item.idRama +"'>"+ item.nombre+"</option>");
+	            	})
+	            }
+	    });
+		
+		 
+		 
+		 
+		 /* METODO PARA ACTUALZAR*/    
+ 	    $("#id_btn_actualiza").click(function(e){
+ 		e.preventDefault();
+ 		
+ 		var validator = $('#form-act').data('bootstrapValidator');
+ 	  	validator.validate();
+ 		
+ 	  if (validator.isValid()) {
+ 		  
+ 		  var formData=new FormData();
+ 		  
+ 		  
+ 		  let foto = document.getElementById('foto_eventos');	            
+ 	      var file =  foto.getAttribute("src");
+ 		  
+ 		  formData.append("idNoticias", $("#id").val());
+ 		  formData.append("imagen", file);
+ 		  formData.append("titulo", $("#id_titulo").val());
+ 		  formData.append("descripcion", $("#id_descripcion").val());
+ 		  formData.append("tipo", $("#id_tipo").val());
+ 		  formData.append("rama", $("#id_rama").val());
+ 		  
+ 		  
+ 		  
+ 	      $.ajax({
+ 	        type: "POST",
+ 	        url: "actualizaNoticias", 
+ 	        data: formData,
+ 	       // enctype: 'multipart/form-data',
+ 	        contentType: false,
+ 	        processData: false,
+ 	        cache: false,
+ 	        success: function(data){
+ 	      	  agregarGrilla(data.lista);
+ 	      	  mostrarMensaje(data.MENSAJE);
+ 	      	  
+ 	      	  limpiar();
+ 	      	  validator.resetForm();
+ 	      	  
+ 	      	$('#id_modal_actualiza').modal("hide");
+ 	        },
+ 	        error: function(){
+ 	      	  mostrarMensaje(MSG_ERROR);
+ 	        }
+ 	      });
+ 	      
+ 	      return false;
+ 		};
+ 		return false;	
+ 	});
+ 	        
+ 	    	 
+ 	        <!-- EDITAR DATOS DE NOTICIAS -->
+ 	    	function editar(id,titulo,descripcion,tipo,rama,imagen){	
+ 	    		
+ 	    		$('#id').val(id);
+ 	    		$('#id_titulo').val(titulo);
+ 	    		$('#id_descripcion').val(descripcion);
+ 	    		$('#id_tipo').val(tipo);
+ 	    		$('#id_rama').val(rama);
+ 	   
+ 	    		document.getElementById('foto_eventos').setAttribute('src',imagen);
+ 	    		
+ 	    		
+ 	    		$('#id_modal_actualiza').modal("show");
+
+ 	    	}
+ 	 
+ 	    	
+ 	    	
+ 	    	
+ 	    	 function limpiar(){				
+
+ 	      		
+ 	      		$('#file-input').val('');
+ 	      		$('#fichero').html('');
+ 	      		
+ 	      	}
+ 	    	
+ 	    	
+ 	    	
+
+	    	//ELIMINAR
+	    	
+	    	function eliminar(id){	
+	    		mostrarMensajeConfirmacion(MSG_ELIMINAR, accionEliminar,null,id);
+	    	}
+	    	
+	    	
+	    	function accionEliminar(id){	
+	    		  $.ajax({
+	    		        type: "POST",
+	    		        url: "eliminaNoticias", 
+	    		        data: {"id":id},
+	    		        success: function(data){
+	    		      	  agregarGrilla(data.lista);
+	    		      	  mostrarMensaje(data.mensaje);
+	    		        },
+	    		        error: function(){
+	    		      	  mostrarMensaje(MSG_ERROR);
+	    		        }
+	    		   });
+	    		}
+	    	
+	    	
+	    	
+	    	 //AL CERRAR EL MODAL REINICIA LAS VALIDACIONES
+	        $('#id_modal_actualiza').on('hide.bs.modal', function (e) {
+	        	var validator = $('#form-act').data('bootstrapValidator');
+	          	validator.validate();
+	        	
+	            validator.resetForm();
+	            limpiar();
+	        	
+	        });  
+ 	 
+		
+
+		function agregarGrilla(lista){
+	       	 $('#id_table').DataTable().clear();
+	       	 $('#id_table').DataTable().destroy();
+	       	 $('#id_table').DataTable({
+	       			data: lista,
+	       			searching: false,
+	       			ordering: true,
+	       			processing: false,
+	       			responsive: true,
+	       			pageLength: 5,
+	       			lengthChange: false,
+	       			language: {
+	       		        "decimal": "",
+	       		        "emptyTable": "No hay información",
+	       		        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+	       		        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+	       		        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+	       		        "infoPostFix": "",
+	       		        "thousands": ",",
+	       		        "lengthMenu": "Mostrar _MENU_ Entradas",
+	       		        "loadingRecords": "Cargando...",
+	       		        "processing": "Procesando...",
+	       		        "search": "Buscar:",
+	       		        "zeroRecords": "Sin resultados encontrados",
+	       		        "paginate": {
+	       		            "first": "Primero",
+	       		            "last": "Ultimo",
+	       		            "next": "Siguiente",
+	       		            "previous": "Anterior"
+	       		        }
+	       		    },
+	       			 
+	       			columns:[
+	       				{data: "idNoticias"},
+	       				{data: "titulo"},
+	       				{data: "descripcion"},
+	       				{data: "fechaRegistro"},
+	       				{data: "tipo.nombre"},
+	       				{data: "rama.nombre"},
+	       				{data: function(row, type, val, meta){
+	    					
+	    					var salida='<img width=85px height=70px src='+row.imagen+'>';
+	    					return salida;
+	    				},className:'text-center'},
+	       				
+	       				{data: function(row, type, val, meta){
+	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idNoticias + '\',\'' + row.titulo + '\',\'' + row.descripcion+ '\',\'' +row.tipo.idTipoNoticias+ '\',\'' +row.rama.idRama+'\',\'' +row.imagen+'\')" ><i class="bi bi-pencil"></i></button>';
+	       					
+	       				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
+	       					return salida;
+	       				},className:'table-sm m-5 table-borderless  caption-top'},
+	       				{data: function(row, type, val, meta){
+	       					var salida='<button class="table-btn-crud" id="botoneditar"  onclick="eliminar(\''+row.idNoticias+'\')" ><i class="bi bi-trash"></i></button>';
+	       					
+	       				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
+	       					return salida;
+	       				},className:'table-sm m-5 table-borderless  caption-top'},	
+	       				
+	       			]                                     
+	       	    });
+	       	 
+	       	 
+	       	 $('#id_table').removeClass('dataTable');
+	       	 //$('#id_table').removeClass('dataTable');
+	       	 
+	       	 $("#id_table").removeAttr("style");
+	       	 
+	       	
+	       }
+		
+		
+		
+		
+		 //AL CERRAR EL MODAL REINICIA LAS VALIDACIONES
+        $('#id_modal_actualiza').on('hide.bs.modal', function (e) {
+        	var validator = $('#form-act').data('bootstrapValidator');
+          	validator.validate();
+        	
+            validator.resetForm();
+        	
+        });  
+		
+		
+		  /*VALIDACIONES PARA ACTUALIZAR*/
+		        
+		    	
+		    	$('#form-act').bootstrapValidator({
+		    	  message: 'This value is not valid',
+		    	  feedbackIcons: {
+		    	      valid: 'glyphicon glyphicon-ok',
+		    	      invalid: 'glyphicon glyphicon-remove',
+		    	      validating: 'glyphicon glyphicon-refresh'
+		    	  },
+		    	  fields: {
+		    	  	titulo: {
+		    	  		selector : '#id_titulo',
+		    	          validators: {
+		    	              notEmpty: {
+		    	                  message: 'El título es un campo obligatorio'
+		    	              },
+		    	              stringLength :{
+		    	              	message:'El título es de 2 a 100 caracteres',
+		    	              	min : 2,
+		    	              	max : 100
+		    	              }
+		    	          }
+		    	      },
+		    	      
+		    	      descripcion: {
+		    	  		selector : '#id_descripcion',
+		    	          validators: {
+		    	              notEmpty: {
+		    	                  message: 'La descripción es un campo obligatorio'
+		    	              },
+		    	              stringLength :{
+		    	              	message:'La descripcion es de 3 a 300 caracteres',
+		    	              	min : 3,
+		    	              	max : 300
+		    	              }
+		    	          }
+		    	      },
+		    	      
+		    	      tipo: {
+							selector: '#id_tipo',
+							validators: {
+								notEmpty: {
+									message: '*Elija una opción'
+								},
+							}
+						},
+		    	      
+		    	      rama: {
+							selector: '#id_rama',
+							validators: {
+								notEmpty: {
+									message: '* Elija una opción'
+								},
+							}
+						},
+		    	      foto: {
+		    	  		selector : '#file-input',
+		    	          validators: {
+		    	              file: {
+		    	              	extension: 'png,jpg,jpeg',
+		    	              	type: 'image/jpeg,image/png,image/jpg',
+		    	              	maxSize: 2*1024*1024,                	
+		    	             		message: 'La foto es de formato jpg, jpeg o png de máximo 2MB'
+		    	           		}
+		    	          }
+		    	      }
+		    	    
+		    	     
+		    	  }   
+		    	});
+		
+		
+		
+		</script>
+		
+       
     </body>
 </html>

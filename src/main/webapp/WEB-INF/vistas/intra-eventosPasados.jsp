@@ -303,7 +303,7 @@
 	    	      	  agregarGrilla(data.lista);
 	    	      	  mostrarMensaje(data.MENSAJE);
 	    	      	  
-	    	      	  //limpiarFormulario();
+	    	      	  limpiar();
 	    	      	  validator.resetForm();
 	    	      	  
 	    	      	$('#id_modal_actualiza').modal("hide");
@@ -336,6 +336,15 @@
 	    	    	}
 	    	 
 	    	 
+	    	    	
+	    	    	
+	    	    	 function limpiar(){				
+
+	    	 	      		
+	    	 	      		$('#file-input').val('');
+	    	 	      		$('#fichero').html('');
+	    	 	      		
+	    	 	      	}
 	   
 	    	    	//ELIMINAR
 	    	    	
@@ -436,6 +445,8 @@
           	validator.validate();
         	
             validator.resetForm();
+            
+            limpiar();
         	
         });  
 		

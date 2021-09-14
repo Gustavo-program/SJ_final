@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -91,5 +92,96 @@ public class NoticiasController {
 		return salida;
 		
 	}
+	
+	
+	
+	
+	
+	//ACTUALIZAR DE OBJETO 
+	
+		@ResponseBody
+		@RequestMapping(value = "/actualizaNoticias", method = RequestMethod.POST)
+		public Map<String, Object> actualizaNoticias(
+				@RequestParam("idNoticias") String idNoticias, //SI ES QUE HAY ERROR PASALO COMO STRING
+				@RequestParam("titulo") String titulo,
+				@RequestParam("descripcion") String descripcion,
+				@RequestParam("tipo") TipoNoticias tipo,
+				@RequestParam("rama") Rama rama,
+				@RequestParam("imagen") String imagen){
+			
+			Map<String, Object> salida = new HashMap<>();
+			try {
+				
+				Noticias obj = new Noticias();
+				obj.setIdNoticias(Integer.parseInt(idNoticias)); //AQUI PARSEAS SI ES QUE HAY ERROR
+				obj.setTitulo(titulo);
+				obj.setDescripcion(descripcion);
+				obj.setFechaRegistro(new Date());/*faltaba poner esto en el actualizar*/
+				obj.setTipo(tipo);
+				obj.setRama(rama);
+				obj.setImagen(imagen);
+				
+				Noticias objSalida = noticiasService.insertaActualizaNoticias(obj);
+				
+				if(objSalida == null) {
+					salida.put("MENSAJE", "Error al actualizar");
+				}
+				else {
+					
+					salida.put("MENSAJE", "Actualización Exitosa");
+				}
+				
+			} 
+			
+			catch (Exception e) {
+				e.printStackTrace();
+				salida.put("MENSAJE", "Se generó un error");
+			}
+			
+			finally {
+				List<Noticias> lista=noticiasService.listaNoticias();
+				salida.put("lista", lista);
+			}
+			
+			return salida;
+			
+		}
+		
+		
+		
+		
+		//ELIMINAR OBJETO NOTICIAS
+		
+		@ResponseBody
+		@RequestMapping("eliminaNoticias")
+		public Map<String, Object> eliminaNoticias(int id){
+			Map<String, Object> salida=new HashMap<String, Object>();
+			
+			try {
+				Optional<Noticias> opt= noticiasService.obtienePorId(id);
+				if(opt.isPresent()) {
+					noticiasService.eliminaNoticias(id);
+					salida.put("mensaje", "Eliminación Exitosa");
+					
+				}
+				else {
+					salida.put("mensaje", "Eliminación Errónea");
+				}
+					
+			} 		
+			catch (Exception e) {
+				e.printStackTrace();
+				salida.put("mensaje", "Se generó un error");
+			}
+			finally {
+				List<Noticias> lista=noticiasService.listaNoticias();
+				salida.put("lista", lista);	
+			}
+				
+			return salida;
+		}
+	
+	
+	
 	
 }

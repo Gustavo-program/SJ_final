@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -31,7 +32,7 @@ public class Noticias implements Serializable{
 	
 	private String titulo;
 	
-	
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "America/Lima")
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "fecha_registro")
 	private Date fechaRegistro;
