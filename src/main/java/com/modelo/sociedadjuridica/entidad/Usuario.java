@@ -74,6 +74,15 @@ public class Usuario implements Serializable {
 
 	
 	
+	/*edad
+	public int edad(Date fechaNacimiento) {
+		LocalDate ahora=LocalDate.now();
+		int edad=ahora.getYear()-fechaNacimiento.getYear();
+		return edad;
+	}
+*/
+	
+	
 	
 	public int getIdUsuario() {
 		return idUsuario;
