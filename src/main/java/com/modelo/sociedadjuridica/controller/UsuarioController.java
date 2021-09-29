@@ -36,7 +36,7 @@ public class UsuarioController {
 	@ResponseBody
 	@RequestMapping("/listaUsuariosxNombre")
 	public List<Usuario> lista(String filtro){
-		return usuarioService.listaUsuarioPorNombreLike("%" + filtro.trim() + "%");
+		return usuarioService.consultaCliente("%" + filtro.trim() + "%");
 	}
 	
 	
