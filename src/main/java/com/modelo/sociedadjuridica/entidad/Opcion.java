@@ -22,6 +22,17 @@ public class Opcion {
 	private String nombre;
 	
 	private String ruta;
+	
+	private String seccion;
+	
+
+	public String getSeccion() {
+		return seccion;
+	}
+
+	public void setSeccion(String seccion) {
+		this.seccion = seccion;
+	}
 
 	public int getIdOpcion() {
 		return idOpcion;

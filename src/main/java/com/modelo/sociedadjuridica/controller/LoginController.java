@@ -29,6 +29,8 @@ public class LoginController {
 		Usuario usuario = service.login(user);
 		if(usuario == null) {
 			request.setAttribute("mensaje", "El Usuario No existe");
+			System.out.println("USER");
+			System.out.println(usuario.getDni());
 			return "login";
 		}
 		else {
@@ -38,6 +40,13 @@ public class LoginController {
 			session.setAttribute("objUsuario", usuario);
 			session.setAttribute("objRoles", roles);
 			session.setAttribute("objMenus", menus);
+			
+			System.out.println("USER");
+			System.out.println(usuario.getDni());
+			menus.forEach((e)->{
+				System.out.println("MENU");
+				System.out.println(e.getNombre());
+			});
 			
 			return "inicioDeSesion";
 		}

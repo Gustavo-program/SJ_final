@@ -20,16 +20,16 @@
     <div id="particles-js"></div>
         <div class="container" id="container">
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="loginPage" method="post" autocomplete="off">
                 <div class="social-container">
                     <img src="img/logo.png" alt="" width="90%">
                 </div>
                 <span></span>
-                <input class="text" id="username" type="email" placeholder="Usuario" />
-                <input class="text" id="password" type="password" placeholder="Contraseña" />
+                <input class="text" name="login" id="username" type="text" placeholder="Usuario" />
+                <input class="text" name="password"  id="password" type="password" placeholder="Contraseña" />
                 <a href="#">¿Olvidaste tu contraseña?</a>
                 <br>
-                <a href="verInicio" class="boton">Ingresar</a>
+                <button type="submit" href="verInicio" class="boton">Ingresar</button>
             </form>
         </div>
     </div>
