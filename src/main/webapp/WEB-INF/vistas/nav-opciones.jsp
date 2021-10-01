@@ -28,21 +28,15 @@
 				<c:forEach var="x" items="${sessionScope.objMenus}">
 
 					<c:if test="${x.seccion == 'A' }">
-						<a class="nav-link" href="verInicio">
+						<a class="nav-link" href="${ x.ruta }">
 							<div class="sb-nav-link-icon active">
-								<i class="bi bi-house-fill"></i>
+								<i class="${ x.icon }"></i>
 							</div> ${x.nombre}
 						</a>
 					</c:if>
 
 				</c:forEach>
 
-
-				<a class="nav-link" href="verInicio">
-					<div class="sb-nav-link-icon active">
-						<i class="bi bi-house-fill"></i>
-					</div> Inicio
-				</a>
 				<div class="sb-sidenav-menu-heading">Editar</div>
 
 				<c:forEach var="x" items="${sessionScope.objMenus}">
@@ -56,7 +50,7 @@
 							data-bs-target="${x.nombre == 'Ver Eventos' ? '#collapseLayouts': ''} "
 							aria-controls="${x.nombre == 'Ver Eventos' ? 'collapseLayouts': ''} ">
 							<div class="sb-nav-link-icon active">
-								<i class="bi bi-house-fill"></i>
+								<i class="${ x.icon }"></i>
 							</div> ${x.nombre} <c:if test="${x.nombre == 'Ver Eventos' }">
 								<div class="sb-sidenav-collapse-arrow">
 									<i class="fas fa-angle-down"></i>
@@ -73,7 +67,7 @@
 					<nav class="sb-sidenav-menu-nested nav">
 						<c:forEach var="x" items="${sessionScope.objMenus}">
 							<c:if test="${x.seccion == 'SE'}">
-								<a class="nav-link" href="verIntraEventosSCO">${x.nombre}</a>
+								<a class="nav-link" href="${ x.ruta }">${x.nombre}</a>
 							</c:if>
 						</c:forEach>
 					</nav>
@@ -99,9 +93,9 @@
 				<c:forEach var="x" items="${sessionScope.objMenus}">
 
 					<c:if test="${x.seccion == 'M' }">
-						<a class="nav-link" href="verInicio">
+						<a class="nav-link" href="${ x.ruta}">
 							<div class="sb-nav-link-icon active">
-								<i class="bi bi-house-fill"></i>
+								<i class="${ x.icon }"></i>
 							</div> ${x.nombre}
 						</a>
 					</c:if>
