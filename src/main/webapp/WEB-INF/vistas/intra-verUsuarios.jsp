@@ -862,12 +862,12 @@
 						  foto: {
 				    	  		selector : '#file-input',
 				    	          validators: {
-				    	              file: {
-				    	              	extension: 'png,jpeg',
-				    	              	type: 'image/jpeg,image/png',
-				    	              	maxSize: 2*1024*1024,                	
-				    	             		message: 'La foto es de formato jpg o png de máximo 2MB'
-				    	           		}
+				    	        	  file: {
+					    	              	extension: 'png,jpg,jpeg',
+					    	              	type: 'image/jpeg,image/png,',
+					    	              	maxSize: 2*1024*1024,                	
+					    	             		message: 'La foto es de formato jpg o png de máximo 2MB'
+					    	           		}
 				    	          }
 				    	      }
 					}

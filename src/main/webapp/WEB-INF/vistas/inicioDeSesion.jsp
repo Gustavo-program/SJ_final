@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<jsp:include page="intranetValida.jsp" />
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -46,19 +48,19 @@
             
             
             <div id="layoutSidenav_content">
-                <main>
+                <main class="w-100">
                     <div class="container-fluid px-4 d2">
                         <div class="row">
-                            <div class="col-lg-8 col-md-6 portfolio-item">
-                                <div class="card">
-                                  <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
+                            <div class="col-lg-6 col-md-6 portfolio-item cardImg" >
+                                <div class="card cardHome"  style="width :80%; height:100%;">
+                                  <img src="${sessionScope.objUsuario.foto}" class="card-img-top" alt="..." style="width: 100%; height:100%;">
                                 </div>
                               </div>
-                            <div class="col-lg-4-a col-md-6 portfolio-item">
-                              <div class="card-body text-center">
-                                <h1 class="mt-4 tar">¡Hola!</h1>
-                                <h5 class="card-title tet">Maryori Sthefanny Alayo Torres</h5>
-                                <p class="card-text ter">DIRECTORA DE PUBLICACIONES</p>
+                            <div class="col-lg-6-a col-md-6 portfolio-item cardImg">
+                              <div class="card-body text-center cardHome">
+                                <h1 class=" tar">¡Hola!</h1>
+                                <h5 class="card-title tet">${sessionScope.objUsuario.nombre} ${sessionScope.objUsuario.apePaterno} ${sessionScope.objUsuario.apeMaterno}</h5>
+                                <p class="card-text ter">${sessionScope.objUsuario.rol.cargo} de ${sessionScope.objUsuario.rol.area}</p>
                               </div>
                             </div>
                         </div>

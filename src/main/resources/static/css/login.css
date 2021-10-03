@@ -11408,3 +11408,17 @@ label svg{
 	cursor: pointer;
 }
 
+
+/*home intranet*/
+
+
+.cardImg{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardHome{
+ text-align: center;
+}

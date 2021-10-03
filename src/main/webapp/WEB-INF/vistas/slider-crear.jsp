@@ -1,3 +1,4 @@
+<jsp:include page="intranetValida.jsp" />
 <!DOCTYPE html>
 <html lang="en">
     <head>
