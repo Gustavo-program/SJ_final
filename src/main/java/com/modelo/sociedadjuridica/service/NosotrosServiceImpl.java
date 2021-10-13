@@ -45,4 +45,21 @@ public class NosotrosServiceImpl implements NosotrosService{
 		return nosotrosRepository.listaNosotrosPorTipo(idTipoNosotros);
 	}
 
+	/**/
+	@Override
+	public List<Nosotros> listaAsociados() {
+		return nosotrosRepository.listaAsociados();
+	}
+	/**/
+
+	@Override
+	public List<Nosotros> listaEditorial() {
+		return nosotrosRepository.listaEditorial();
+	}
+
+	@Override
+	public List<Nosotros> listaConsultivo() {
+		return nosotrosRepository.listaConsultivo();
+	}
+	
 }

@@ -15,6 +15,19 @@ public interface NosotrosRepository extends JpaRepository<Nosotros, Integer> {
 	
 	
 	
+	/*LISTADO DE NOSOTROS POR TIPO*/
+	@Query("Select x from Nosotros x where tipoNosotros = 1")
+	public abstract List<Nosotros> listaAsociados();
+	
+	@Query("Select x from Nosotros x where tipoNosotros = 2")
+	public abstract List<Nosotros> listaEditorial();
+	
+	@Query("Select x from Nosotros x where tipoNosotros = 3")
+	public abstract List<Nosotros> listaConsultivo();
+	
+	/**/
+	
+	
 	//----------- LISTADO DE NOTICIAS POR TIPO DE NOTICIA -----------------//
 		//--------------- FALTA CREAR SU STORE PROCEDURE --------------------//
 	//-----------------ESTA MAL HECHO TENGO QUE ARREGLARLO--------//

@@ -9,6 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <!-- Favicons -->
   <link href="img/logo/isotipo.png" rel="icon">
   <link href="img/logo/isotipo.png" rel="apple-touch-icon">
@@ -22,7 +24,6 @@
   <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="css/asociadosExtraordinario.css" rel="stylesheet">
@@ -60,87 +61,12 @@
     <section id="about" class="about">
       <div class="container">
         
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="card">
-              <img src="img/img2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Gustavo Calderon</h5>
-                <p class="card-title text-center">Abogado</p>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/img2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Gustavo Calderon</h5>
-                <p class="card-title text-center">Abogado</p>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/img2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Gustavo Calderon</h5>
-                <p class="card-title text-center">Abogado</p>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/img2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Gustavo Calderon</h5>
-                <p class="card-title text-center">Abogado</p>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/img2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Gustavo Calderon</h5>
-                <p class="card-title text-center">Abogado</p>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/img2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Gustavo Calderon</h5>
-                <p class="card-title text-center">Abogado</p>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/img2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Gustavo Calderon</h5>
-                <p class="card-title text-center">Abogado</p>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/img2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Gustavo Calderon</h5>
-                <p class="card-title text-center">Abogado</p>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4" id="nosotros-asociados">
+          
+        
+        
+         
+          
         </div>    
       </div>
       <nav aria-label="Page navigation example">
@@ -169,12 +95,47 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
   <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
   <script src="vendor/purecounter/purecounter.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+  
+  
+  
+  
+  <script type="text/javascript">
+  
+  
+  
+  $.getJSON("listaNosotrosAsociados", function (data){				
+		$.each(data, function(index,item){             
+			$('#nosotros-asociados').append(
+					"<div class='col'>"+
+					"<div class='card cardStyle'>"+
+					"<img src="+item.foto+" class='card-img-top img-card' alt='imagen no encontrada'>"+
+					"<div class='card-body'>"+
+						"<h5 class='card-title text-center'>"+
+						item.nombre+
+						"</h5>"+
+						"<p class='card-title text-center'>"+
+						item.sexo+
+						"</p>"+
+						"<p class='card-text'>"+
+						item.descripcion+
+						"</p>"+
+					"</div>"+
+					"</div>"+
+					
+					"</div>"
+					
+					);  			
+		});
+	
+	});
+ 
+  
+  
+  </script>
 
 </body>
 

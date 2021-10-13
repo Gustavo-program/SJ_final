@@ -275,9 +275,9 @@
     	                  message: 'La descripción es un campo obligatorio'
     	              },
     	              stringLength :{
-    	              	message:'La descripcion es de 3 a 300 caracteres',
+    	              	message:'La descripcion es de 3 a 100 caracteres',
     	              	min : 3,
-    	              	max : 300
+    	              	max : 100
     	              }
     	          }
     	      },

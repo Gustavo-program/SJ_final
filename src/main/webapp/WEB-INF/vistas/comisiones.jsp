@@ -9,6 +9,17 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+
+ <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+  
+  <!-- Vendor JS Files -->
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/purecounter/purecounter.js"></script>
+
+
   <!-- Favicons -->
   <link href="img/logo/isotipo.png" rel="icon">
   <link href="img/logo/isotipo.png" rel="apple-touch-icon">
@@ -77,10 +88,11 @@
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, libero. Ut nisi corrupti magnam exercitationem nihil est tempora quam dicta distinctio quae cum, error natus hic tenetur et. Quas, vero!</p>
             </div>
             <div class="row portfolio-container">
-              
+            
+            
               <div class="col-lg-4 col-md-6 portfolio-item">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Kimberly Victoria Lezama Pérez</h5>
                     <p class="card-text">PRESIDENTA</p>
@@ -90,7 +102,7 @@
 
               <div class="col-lg-4 col-md-6 portfolio-item">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Lady Carol Castellanos Coca</h5>
                     <p class="card-text">VICEPRESIDENTA</p>
@@ -100,7 +112,7 @@
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Maryori Sthefanny Alayo Torres</h5>
                     <p class="card-text">DIRECTORA</p>
@@ -110,7 +122,7 @@
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Klismann Hassler Arias Quispe</h5>
                     <p class="card-text">ASOCIADO</p>
@@ -120,7 +132,7 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Jhon Ludeña Delgado</h5>
                     <p class="card-text">ASOCIADO</p>
@@ -130,7 +142,7 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Yakelin Andrea Medina Sulca</h5>
                     <p class="card-text">ASOCIADO</p>
@@ -140,7 +152,7 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Joaquin Mauricio Ccanchi Ccanchi</h5>
                     <p class="card-text">ASOCIADO</p>
@@ -150,7 +162,7 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Doris Valeria Orrego León</h5>
                     <p class="card-text">DIRECTORA</p>
@@ -160,7 +172,7 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Valery Dalila Mamani Bejarano</h5>
                     <p class="card-text">ASOCIADO</p>
@@ -170,7 +182,7 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Alexander Buitrón Picharde</h5>
                     <p class="card-text">ASOCIADO</p>
@@ -180,7 +192,7 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Maricruz Rivera Montes</h5>
                     <p class="card-text">ASOCIADO</p>
@@ -190,40 +202,47 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">José Martín Colán Cueva</h5>
                     <p class="card-text">DIRECTOR</p>
                   </div>
                 </div>
               </div>
+              
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Céspedes Orestes Goñas Camus</h5>
                     <p class="card-text">ASOCIADO</p>
                   </div>
                 </div>
               </div>
+              
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Renán Abregú Huamán</h5>
                     <p class="card-text">ASOCIADO</p>
                   </div>
                 </div>
               </div>
+              
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
+                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title tet">Santa Monica Sivipaucar Taipe</h5>
                     <p class="card-text">ASOCIADO</p>
                   </div>
                 </div>
               </div>
+              
+              
+              
+              
             </div>
           </div>
         </div>
@@ -237,15 +256,8 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
-  <script src="vendor/purecounter/purecounter.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
+ 
+ <!-- Template Main JS File -->
   <script src="js/main.js"></script>
 
 </body>

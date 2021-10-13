@@ -37,6 +37,28 @@ public class NosotrosController {
 		return nosotrosService.listaNosotrosPorNombreLike("%"+filtro.trim() + "%");
 	}
 	
+	/**/
+	@ResponseBody
+	@RequestMapping("/listaNosotrosAsociados")
+	public List<Nosotros> listaAsociados() {
+		return nosotrosService.listaAsociados();
+	}
+	
+	@ResponseBody
+	@RequestMapping("/listaNosotrosEditorial")
+	public List<Nosotros> listaEditorial() {
+		return nosotrosService.listaEditorial();
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping("/listaNosotrosConsultivo")
+	public List<Nosotros> listaConsultivo() {
+		return nosotrosService.listaConsultivo();
+	}
+	
+	
+	
 	//REGISTRO DE OBJETO NOSOTROS
 	@ResponseBody
 	@RequestMapping(value = "/insertaNosotros", method = RequestMethod.POST)
