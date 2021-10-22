@@ -53,4 +53,19 @@ public class EventosScoServiceImpl implements EventosScoService{
 		return null;
 	}
 
+	@Override
+	public List<EventosSco> listaESeminarios() {
+		return eventosScoRepository.listaESeminarios();
+	}
+
+	@Override
+	public List<EventosSco> listaECursos() {
+		return eventosScoRepository.listaECursos();
+	}
+
+	@Override
+	public List<EventosSco> listaEOtros() {
+		return eventosScoRepository.listaEOtros();
+	}
+
 }

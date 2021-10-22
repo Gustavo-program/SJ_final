@@ -886,3 +886,19 @@ section {
   color: #076b92;
   text-decoration: underline !important;
 }
+
+
+/*arreglo de card*/
+.cardStyle{
+	width:100%;
+	height:100%;
+	margin-bottom: 30px;
+	display: block !important;
+}
+.img-card{
+		width:100%;
+		height:200px;
+}
+#listaCursos{
+	top:0px !important;
+}

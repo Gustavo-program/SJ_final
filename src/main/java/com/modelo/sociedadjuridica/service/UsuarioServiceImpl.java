@@ -68,6 +68,26 @@ public class UsuarioServiceImpl implements UsuarioService{
 		return usuarioRepository.traerEnlacesDeUsuario(idUsuario);
 	}
 
+	@Override
+	public List<Usuario> listaPublicaciones() {
+		return usuarioRepository.listaPublicaciones();
+	}
+
+	@Override
+	public List<Usuario> listaMarketing() {
+		return usuarioRepository.listaMarketing();
+	}
+
+	@Override
+	public List<Usuario> listaCursosSeminarios() {
+		return usuarioRepository.listaCursosSeminarios();
+	}
+	
+	@Override
+	public List<Usuario> listaTodos() {
+		return usuarioRepository.listaTodos();
+	}
+
 	
 	
 }

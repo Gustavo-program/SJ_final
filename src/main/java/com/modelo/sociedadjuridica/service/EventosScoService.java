@@ -20,6 +20,17 @@ public interface EventosScoService {
 	
 	//
 	
+	/**/
+	
+	public abstract List<EventosSco> listaESeminarios();
+	public abstract List<EventosSco> listaECursos();
+	public abstract List<EventosSco> listaEOtros();
+	
+	
+	/**/
+	
+	
+	
 	public abstract List<EventosSco> listaEventosScoPorRama(int idRama);
 	
 	public abstract List<EventosSco> listaEventosScoPorTipo(int idTipoSco);

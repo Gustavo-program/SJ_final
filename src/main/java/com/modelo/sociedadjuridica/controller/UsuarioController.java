@@ -33,6 +33,35 @@ public class UsuarioController {
 		return usuarioService.listaUsuarios();
 	}
 	
+	
+	/*lista usuarios para la principal*/
+	@ResponseBody
+	@RequestMapping("/listaTodos")
+	public List<Usuario> listaTodos(){
+		return usuarioService.listaTodos();
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping("/listaPublicaciones")
+	public List<Usuario> listaPublicaciones(){
+		return usuarioService.listaPublicaciones();
+	}
+	
+	@ResponseBody
+	@RequestMapping("/listaMarketing")
+	public List<Usuario> listaMarketing(){
+		return usuarioService.listaMarketing();
+	}
+	
+	@ResponseBody
+	@RequestMapping("/listaCursosSeminarios")
+	public List<Usuario> listaCursosSeminarios(){
+		return usuarioService.listaCursosSeminarios();
+	}
+	
+	
+	
 	@ResponseBody
 	@RequestMapping("/listaUsuariosxNombre")
 	public List<Usuario> lista(String filtro){

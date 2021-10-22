@@ -31,6 +31,36 @@ public class EventosScoController {
 	}
 	
 	
+	/**/
+	
+	
+	@ResponseBody
+	@RequestMapping("/listaEventosSeminarios")
+	public List<EventosSco> listaESeminarios() {
+		return eventosScoService.listaESeminarios();
+	}
+	
+	@ResponseBody
+	@RequestMapping("/listaEventosCursos")
+	public List<EventosSco> listaECursos() {
+		return eventosScoService.listaECursos();
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping("/listaEventosOtros")
+	public List<EventosSco> listaEOtros() {
+		return eventosScoService.listaEOtros();
+	}
+	
+	
+	
+	
+	
+	/**/
+	
+	
+	
 	@ResponseBody
 	@RequestMapping("/listaEventosScoxTitulo")
 	public List<EventosSco> lista(String filtro) {

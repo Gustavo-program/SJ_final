@@ -9,16 +9,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-
- <!-- Template Main JS File -->
-  <script src="js/main.js"></script>
-  
-  <!-- Vendor JS Files -->
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/purecounter/purecounter.js"></script>
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
   <!-- Favicons -->
   <link href="img/logo/isotipo.png" rel="icon">
@@ -33,7 +24,8 @@
   <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
 
   <!-- Template Main CSS File -->
   <link href="css/comisiones.css" rel="stylesheet">
@@ -87,163 +79,47 @@
               <h2>Sociedad Juridica</h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, libero. Ut nisi corrupti magnam exercitationem nihil est tempora quam dicta distinctio quae cum, error natus hic tenetur et. Quas, vero!</p>
             </div>
-            <div class="row portfolio-container">
             
             
-              <div class="col-lg-4 col-md-6 portfolio-item">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Kimberly Victoria Lezama Pérez</h5>
-                    <p class="card-text">PRESIDENTA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Lady Carol Castellanos Coca</h5>
-                    <p class="card-text">VICEPRESIDENTA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Maryori Sthefanny Alayo Torres</h5>
-                    <p class="card-text">DIRECTORA</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Klismann Hassler Arias Quispe</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Jhon Ludeña Delgado</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Yakelin Andrea Medina Sulca</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Joaquin Mauricio Ccanchi Ccanchi</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Doris Valeria Orrego León</h5>
-                    <p class="card-text">DIRECTORA</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Valery Dalila Mamani Bejarano</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Alexander Buitrón Picharde</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Maricruz Rivera Montes</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">José Martín Colán Cueva</h5>
-                    <p class="card-text">DIRECTOR</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Céspedes Orestes Goñas Camus</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Renán Abregú Huamán</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="card" style="width: 18rem;">
-                  <img src="img/foto1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title tet">Santa Monica Sivipaucar Taipe</h5>
-                    <p class="card-text">ASOCIADO</p>
-                  </div>
-                </div>
-              </div>
-              
-              
-              
+            
+            
+            <div class=" portfolio-container" >
+            
+            <div class="row">
+	            <div class="col-lg-4 col-md-6 portfolio-item" id="listaTodos">  
+				</div>
+            </div>
+            
+            <!-- 
+            PEQUE�O COMENTARIO, CADA DIV TIENE UN 4 EN TAMA�O DE GRILLA, EL TAMA�O TOTAL ES 12, ENTONCES SI SON 4 ELEMENTOS CON 4 DE GRILLA 
+            OCUPA 16 POR LO QUE EXEDE A LOS 12, POR ENDE NO SE PUEDE VISUALIZAR EL DE MARKETING, PERO SI EN EL FILTRO, SI CAMBIO LA GRILLA
+            A 3 SI SALE PERO DEMASIADO JUNTO, LUEGO VEO LOS ESTILOS.
+             -->
+             <!-- LUEGO TENGO QUE ARREGLAR ESTA WEBA... -->
+            
+             <div class="row">
+	            <div class="col-lg-4 col-md-6 portfolio-item filter-app" id="listaMarketing" >
+				</div>
+            
+            
+            
+	            <div class="col-lg-4 col-md-6 portfolio-item filter-card" id="listaPublicaciones">
+				</div>
+           
+            
+             
+	            <div class="col-lg-4 col-md-6 portfolio-item filter-web" id="listaCursos">
+				</div>
+            </div>
+            
+            	
               
             </div>
+            
+            
+             
+           
+            
           </div>
         </div>
     </div>
@@ -257,8 +133,142 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
  
+ <!-- Vendor JS Files -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/purecounter/purecounter.js"></script>
+ 
+ 
  <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+
+
+<script type="text/javascript">
+  
+  $.getJSON("listaTodos", function (data){				
+		$.each(data, function(index,item){             
+			$('#listaTodos').append(
+					
+					
+					
+	                
+					"<div class='card cardStyle' style='width: 18rem;'>"+
+					 "<img src="+item.foto+" class='card-img-top img-card' alt='imagen no encontrada'>"+
+	                  "<div class='card-body'>"+
+	                    "<h5 class='card-title tet'>"+
+	                  		item.nombre+ ' ' +item.apePaterno+ ' ' +item.apeMaterno+
+	                  	"</h5>"+
+	                    "<p class='card-text'>"+
+	                  		item.rol.cargo+
+	                  	"</p>"+
+	                  "</div>"+
+	                "</div>"
+					
+		          
+					 
+					
+					
+					);  			
+		});
+	
+	});
+ 
+  
+  
+  $.getJSON("listaMarketing", function (data){				
+		$.each(data, function(index,item){             
+			$('#listaMarketing').append(
+					
+					
+	                
+					"<div class='card cardStyle' style='width: 18rem;'>"+
+					 "<img src="+item.foto+" class='card-img-top img-card' alt='imagen no encontrada'>"+
+	                  "<div class='card-body'>"+
+	                    "<h5 class='card-title tet'>"+
+	                  		item.nombre+ ' ' +item.apePaterno+ ' ' +item.apeMaterno+
+	                  	"</h5>"+
+	                    "<p class='card-text'>"+
+	                  		item.rol.cargo+
+	                  	"</p>"+
+	                  "</div>"+
+	                "</div>"
+					
+		          
+					 
+					
+					
+					);  			
+		});
+	
+	});
+
+  
+  $.getJSON("listaPublicaciones", function (data){				
+		$.each(data, function(index,item){             
+			$('#listaPublicaciones').append(
+					
+					
+					
+	                
+					"<div class='card cardStyle' style='width: 18rem;'>"+
+					 "<img src="+item.foto+" class='card-img-top img-card' alt='imagen no encontrada'>"+
+	                  "<div class='card-body'>"+
+	                    "<h5 class='card-title tet'>"+
+	                  		item.nombre+ ' ' +item.apePaterno+ ' ' +item.apeMaterno+
+	                  	"</h5>"+
+	                    "<p class='card-text'>"+
+	                  		item.rol.cargo+
+	                  	"</p>"+
+	                  "</div>"+
+	                "</div>"
+					
+		         
+					 
+					
+					
+					);  			
+		});
+	
+	});
+
+  
+ 
+  
+  
+  
+  $.getJSON("listaCursosSeminarios", function (data){				
+		$.each(data, function(index,item){             
+			$('#listaCursos').append(
+					
+					
+					
+	                
+					"<div class='card cardStyle' style='width: 18rem;'>"+
+					 "<img src="+item.foto+" class='card-img-top img-card' alt='imagen no encontrada'>"+
+	                  "<div class='card-body'>"+
+	                    "<h5 class='card-title tet'>"+
+	                  		item.nombre+ ' ' +item.apePaterno+ ' ' +item.apeMaterno+
+	                  	"</h5>"+
+	                    "<p class='card-text'>"+
+	                  		item.rol.cargo+
+	                  	"</p>"+
+	                  "</div>"+
+	                "</div>"
+					
+		    
+					 
+					
+					
+					);  			
+		});
+	
+	});
+  
+  
+  
+  
+  </script>
 
 </body>
 

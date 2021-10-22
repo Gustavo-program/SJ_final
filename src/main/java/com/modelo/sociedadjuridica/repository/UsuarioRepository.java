@@ -53,4 +53,27 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 	public abstract List<Rol> traerRolesDeUsuario(@Param("var_idUsuario")int idUsuario);
 	
 	
+	/*LISTAR POR AREAS*/
+	
+	@Query("Select u from Usuario u, Rol r where "
+			+ " u.rol.idRol = r.idRol and "
+			+ " r.area = 'Todos' ")
+	public abstract List<Usuario> listaTodos();
+	
+	@Query("Select u from Usuario u, Rol r where "
+			+ " u.rol.idRol = r.idRol and "
+			+ " r.area = 'Publicaciones' ")
+	public abstract List<Usuario> listaPublicaciones();
+	
+	@Query("Select u from Usuario u, Rol r where "
+			+ " u.rol.idRol = r.idRol and "
+			+ " r.area = 'Marketing & Finaciamiento' ")
+	public abstract List<Usuario> listaMarketing();
+	
+	@Query("Select u from Usuario u, Rol r where "
+			+ " u.rol.idRol = r.idRol and "
+			+ " r.area = 'Cursos & Seminarios' ")
+	public abstract List<Usuario> listaCursosSeminarios();
+	
+	
 }
