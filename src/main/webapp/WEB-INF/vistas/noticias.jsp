@@ -82,8 +82,8 @@
             <div class="col-lg-4 offset-md-7">
               <select name="tipo" id="id_tipo" class="form-select" aria-label="Default select example">
               
-              <option selected value=" ">Elige una opci髇</option>
-              <option  value="-1">Lo m醩 nuevo</option>
+              <option   value=" ">Elige una opci髇</option>
+              <option  selected value="-1">Lo m醩 nuevo</option>
               
               <!-- 
                 <option selected>Organizar por</option>
@@ -117,112 +117,12 @@
             
               -->
               
+            
               
-              <div class="col">
-              <div class="card h-100">
-                <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small>
-                </div>
-              </div>
-            </div>
             
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small>
-                </div>
-              </div>
-            </div>
+           
             
-            
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small>
-                </div>
-              </div>
-            </div>
-            
-            
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small>
-                </div>
-              </div>
-            </div>
+           
             
           </div>
         </div>
@@ -264,6 +164,34 @@
 <script type="text/javascript">
 
 
+$.getJSON("listaNoticias", function (data){				
+	$.each(data, function(index,item){             
+		$('#listaNoticias').append(
+				
+				
+				'<div class="col">'+
+	              '<div class="card h-100 cardStyle">'+
+	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
+	                '<div class="card-body">'+
+	                  '<h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">'+item.titulo+'</a></h5>'+
+	                  '<p class="card-text">'+item.descripcion+'</p>'+
+	                '</div>'+
+	                '<div class="card-footer">'+
+	                  '<small class="text-muted">Actualizado el '+item.fechaRegistro+' p.m.</small>'+
+	                '</div>'+
+	              '</div>'+
+	            '</div>'
+	          
+				 
+				
+				
+				);  			
+	});
+
+});
+
+
+
 
 	 $.ajax({
          type: "GET",
@@ -276,9 +204,6 @@
          	})
          }
  });
-
-	 
-	 
 
 	 
 	// function listadoxTipo(){
@@ -299,18 +224,22 @@
 			         {
 			         	$.each(response, function(index,item){
 			         		console.log("Noticias: "+item.titulo)
-			         		$('#listaNoticias').append('<div class="col">'+
-			  		              '<div class="card h-100">'+
-			  		               '<img src='+item.imagen+' class="card-img-top" alt="...">'+
-			  		                '<div class="card-body">'+
-			  		                  '<h5 class="card-title"><a href="detalleNoticia" class="card-link tet">'+item.titulo+'</a></h5>'+
-			  		                  '<p class="card-text">'+item.descripcion+'</p>'+
-			  		                '</div>'+
-			  		                '<div class="card-footer">'+
-			  		                  '<small class="text-muted">Actualizado el '+item.fechaRegistro+' p.m.</small>'+
-			  		                '</div>'+
-			  		              '</div>'+
-			  		            '</div>');
+			         		$('#listaNoticias').append(
+			         				
+			         				'<div class="col">'+
+			      	              '<div class="card h-100 cardStyle">'+
+			      	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
+			      	                '<div class="card-body">'+
+			      	                  '<h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">'+item.titulo+'</a></h5>'+
+			      	                  '<p class="card-text">'+item.descripcion+'</p>'+
+			      	                '</div>'+
+			      	                '<div class="card-footer">'+
+			      	                  '<small class="text-muted">Actualizado el '+item.fechaRegistro+' p.m.</small>'+
+			      	                '</div>'+
+			      	              '</div>'+
+			      	            '</div>'
+			      	            
+			         		);
 			         		
 			         	})
 			         }
@@ -326,18 +255,22 @@
 			         {
 			         	$.each(response, function(index,item){
 			         		console.log("Noticias: "+item.titulo)
-			         		$('#listaNoticias').append('<div class="col">'+
-			  		              '<div class="card h-100">'+
-			  		               '<img src='+item.imagen+' class="card-img-top" alt="...">'+
-			  		                '<div class="card-body">'+
-			  		                  '<h5 class="card-title"><a href="detalleNoticia" class="card-link tet">'+item.titulo+'</a></h5>'+
-			  		                  '<p class="card-text">'+item.descripcion+'</p>'+
-			  		                '</div>'+
-			  		                '<div class="card-footer">'+
-			  		                  '<small class="text-muted">Actualizado el '+item.fechaRegistro+' p.m.</small>'+
-			  		                '</div>'+
-			  		              '</div>'+
-			  		            '</div>');
+			         		$('#listaNoticias').append(
+			         				
+			         				'<div class="col">'+
+			      	              '<div class="card h-100 cardStyle">'+
+			      	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
+			      	                '<div class="card-body">'+
+			      	                  '<h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">'+item.titulo+'</a></h5>'+
+			      	                  '<p class="card-text">'+item.descripcion+'</p>'+
+			      	                '</div>'+
+			      	                '<div class="card-footer">'+
+			      	                  '<small class="text-muted">Actualizado el '+item.fechaRegistro+' p.m.</small>'+
+			      	                '</div>'+
+			      	              '</div>'+
+			      	            '</div>'		
+			         		
+			         		);
 			         		
 			         	})
 			         }
