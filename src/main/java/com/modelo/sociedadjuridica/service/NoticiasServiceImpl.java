@@ -51,7 +51,7 @@ public class NoticiasServiceImpl implements NoticiasService{
 	@Override
 	public List<Noticias> listaNoticiasPorTipo(int idTipo) {
 		// EN ESPERA
-		return null;
+		return noticiasRepository.listaNoticiasPorTipo(idTipo);
 	}
 
 }

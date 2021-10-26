@@ -41,6 +41,12 @@ public class NoticiasController {
 	}
 	
 	
+	@ResponseBody
+	@RequestMapping("/listaNoticiasxTipo")
+	public List<Noticias> listaxTipo(int idTipo) {
+		return noticiasService.listaNoticiasPorTipo(idTipo);
+	}
+	
 	
 	//REGISTRO DE OBJETO NOTICIAS
 	@ResponseBody

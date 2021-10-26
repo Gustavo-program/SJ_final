@@ -39,6 +39,16 @@ public class EventosProximos implements Serializable{
 	
 	private String foto;
 	
+	
+	
+	public String getObtenerEstado() {
+		if(getEstado()==0) {
+			return "Online";
+		}
+		else return "Presencial";
+	}
+	
+	
 	public int getIdEventosProximos() {
 		return idEventosProximos;
 	}

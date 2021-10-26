@@ -125,8 +125,8 @@ $.getJSON("listaEventosSeminarios", function (data){
 		$('#listaSeminario').append(
 				
 				 "<div class='col'>"+
-		            "<div class='card'>"+
-		              "<img src="+item.foto+" class='card-img-top' alt='...'>"+
+		            "<div class='card cardStyle'>"+
+		              "<img src="+item.foto+" class='card-img-top img-card' alt='...'>"+
 		              "<div class='card-body'>"+
 		                "<h5 class='card-title'>"+
 		                "<a href='' class='card-link ter'>"+

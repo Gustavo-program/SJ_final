@@ -8,6 +8,11 @@ public class VistasController {
 	
 	//vistas para el cliente
 	
+	@RequestMapping("/detalleNoticia")
+	public String detalleNoticia() {
+		return "noticias-sub";
+	}
+	
 	@RequestMapping("/verIndex")
 	public String verIndex() {
 		return "index";

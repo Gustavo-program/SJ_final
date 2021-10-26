@@ -134,8 +134,8 @@
 			$('#listaPasados').append(
 					
 				"<div class='col'>"+
-	            "<div class='card'>"+
-	              "<img src="+item.foto+" class='card-img-top' alt='...'>"+
+	            "<div class='card cardStyle'>"+
+	              "<img src="+item.foto+" class='card-img-top img-card' alt='...'>"+
 	              "<div class='card-body'>"+
 	                "<h5 class='card-title'>"+
 	              	"<a href='' class='card-link ter'>"+
@@ -145,12 +145,12 @@
 	                "<p class='card-text tex3'>"+
 	              	"<i class='bi bi-calendar-date'>"+
 	              	"</i>"+
-	              	item.fecha+
+	              	' ' + item.fecha +
 	              	"</p>"+
 	                "<p class='card-text ten'>"+
 	              	"<i class='bi bi-briefcase-fill'>"+
 	              	"</i>"+
-	              	item.rama.nombre+
+	              	' ' + item.rama.nombre+
 	              	"</p>"+
 	                "<p class='card-text'>"+
 	                "<small class='text-muted'>"+

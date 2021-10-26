@@ -8,7 +8,9 @@
   <title>Noticias</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  
+  
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <!-- Favicons -->
   <link href="img/logo/isotipo.png" rel="icon">
   <link href="img/logo/isotipo.png" rel="apple-touch-icon">
@@ -170,6 +172,32 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+  
+  
+  <script>
+  
+  $(document).ready(function() {
+	  getQueryVariable()
+
+	});
+  
+  function getQueryVariable() {
+	   var query = window.location.pathname;
+	   
+	   console.log(query)
+	   var vars = query.split("/");
+	   console.log(vars[1])
+	   for (var i=0; i < vars.length; i++) {
+	      // var pair = vars[i].split("=");
+	      /* if(pair[0] == variable) {
+	           return pair[1];
+	       }*/
+	       console.log(vars[i])
+	   }
+	   return false;
+	}
+
+  </script>
 
 </body>
 

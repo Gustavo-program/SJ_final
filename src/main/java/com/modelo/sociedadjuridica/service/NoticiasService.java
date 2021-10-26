@@ -19,7 +19,6 @@ public interface NoticiasService {
 	
 	public abstract List<Noticias> listaNoticiasPorRama(int idRama);
 	
-	public abstract List<Noticias> listaNoticiasPorTipo(int idTipo);
-	
+	public abstract List<Noticias> listaNoticiasPorTipo(int idTipo);	
 
 }

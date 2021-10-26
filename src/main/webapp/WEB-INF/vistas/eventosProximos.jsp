@@ -120,17 +120,11 @@
   
   
   <script type="text/javascript">
+
   
-  /*
+  agregarCard();
   
-							  var salida = '';
-	    					if (row.estado == 0)
-	    						salida ='Online';
-	    					else if (row.estado == 1)
-	    						salida ='Presencial';
-	    					return salida;
-  
-  */
+  function agregarCard(){	
   
   $.getJSON("listaEventosProximos", function (data){				
 		$.each(data, function(index,item){      
@@ -138,8 +132,8 @@
 				
 			$('#listadoProximos').append(
 					"<div class='col'>"+
-		            "<div class='card'>"+
-		             "<img src="+item.foto+" class='card-img-top' alt='...'>"+
+		            "<div class='card cardStyle'>"+
+		             "<img src="+item.foto+" class='card-img-top img-card' alt='...'>"+
 		              "<div class='card-body'>"+
 		                "<h5 class='card-title'>"+
 		              "<a href='' class='card-link ter'>"+
@@ -149,7 +143,9 @@
 		                "<p class='card-text ten'>"+
 		              "<i class='bi bi-calendar-date'>"+
 		                "</i>"+
-		                ' ' +item.fecha+ ' ' +"-"+ ' '+
+		                ' ' +item.fecha+ ' ' +
+		                "-" +
+		                ' '+
 		                "<i class='bi bi-clock'>"+
 		                "</i>"+ 
 		                ' '+item.hora+
@@ -157,7 +153,7 @@
 		                "<p class='card-text ten'>"+
 		                "<i class='bi bi-geo-alt'>"+
 		                "</i>"+
-		                item.estado+
+		                item.obtenerEstado+
 		                "</p>"+
 		              "</div>"+
 		            "</div>"+
@@ -171,7 +167,7 @@
 	
 	});
   
-  
+  }
   
   
   </script>
