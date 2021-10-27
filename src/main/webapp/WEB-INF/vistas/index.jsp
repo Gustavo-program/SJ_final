@@ -9,6 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <!-- Favicons -->
   <link href="img/logo/isotipo.png" rel="icon">
   <link href="img/logo/isotipo.png" rel="apple-touch-icon">
@@ -59,7 +61,9 @@
 
         <div class="row">
 
-          <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="row row-cols-1 row-cols-md-4 g-4" id="listadoN">
+          
+          <!-- 
             <div class="col">
               <div class="card h-100">
                 <img src="img/features.jpg" class="card-img-top" alt="...">
@@ -72,42 +76,9 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/features.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="#" class="card-link tet">Derecho Internacional Económico: Temas actuales en comercio, inversión y derecho transnacional</a></h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Aqui va la fecha y/o hora</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/features.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="#" class="card-link tet">Derecho Internacional Económico: Temas actuales en comercio, inversión y derecho transnacional</a></h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Última actualización hace 3 minutos</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="img/features.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="#" class="card-link tet">Derecho Internacional Económico: Temas actuales en comercio, inversión y derecho transnacional</a></h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">fecha y hora</small>
-                </div>
-              </div>
-            </div>
+            
+           
+             -->
           </div>
 
         </div>
@@ -282,6 +253,52 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+
+	<script type="text/javascript">
+	
+	
+	
+
+
+	$.getJSON("listaNoticiasDesc", function (data){				
+		$.each(data, function(index,item){      
+			$('#listadoN').append(
+					
+					"<div class='col'>"+
+		              "<div class='card h-100 cardStyle'>"+
+		                "<img src="+item.imagen+" class='card-img-top img-card' alt='...'>"+
+		                "<div class='card-body'>"+
+		                 " <h5 class='card-title'>"+
+		                 " <a href='detalleNoticia' class='card-link tet'>"+
+		                 item.titulo+
+		                  "</a>"+
+		                  "</h5>"+
+		                 " <p class='card-text'>"+
+		                 item.descripcion+
+		                 " </p>"+
+		                "</div>"+
+		                "<div class='card-footer'>"+
+		                 "<small class='text-muted'>"+
+		                 'Actualizado el ' +item.fechaRegistro+
+		                  "</small>"+
+		                "</div>"+
+		             " </div>"+
+		           " </div>"
+		            
+					
+					
+					);  			
+		});
+
+	});
+
+
+	
+	
+	
+	
+	</script>
+
 
 </body>
 

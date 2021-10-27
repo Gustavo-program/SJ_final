@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,6 +32,16 @@ public class NoticiasController {
 	@RequestMapping("/listaNoticias")
 	public List<Noticias> listaNoticias(){
 		return noticiasService.listaNoticias();
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping("/listaNoticiasDesc")
+	public List<Noticias> listaNoticiasDesc(){
+		int page = 0;
+		int size = 4;
+		Pageable pageable = PageRequest.of(page, size);
+		return noticiasService.listaNoticiasDesc(pageable);
 	}
 	
 	

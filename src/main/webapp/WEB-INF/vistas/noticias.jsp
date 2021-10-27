@@ -25,6 +25,7 @@
   <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+  
 
   <!-- Template Main CSS File -->
   <link href="css/noticia.css" rel="stylesheet">
@@ -154,6 +155,7 @@
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
   <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="vendor/purecounter/purecounter.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
 
   <!-- Template Main JS File -->
@@ -173,7 +175,7 @@ $.getJSON("listaNoticias", function (data){
 	              '<div class="card h-100 cardStyle">'+
 	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
 	                '<div class="card-body">'+
-	                  '<h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">'+item.titulo+'</a></h5>'+
+	                  '<h5 class="card-title"><a href="detalleNoticia?id=obj.getId()" class="card-link tet">'+item.titulo+'</a></h5>'+
 	                  '<p class="card-text">'+item.descripcion+'</p>'+
 	                '</div>'+
 	                '<div class="card-footer">'+
@@ -230,7 +232,7 @@ $.getJSON("listaNoticias", function (data){
 			      	              '<div class="card h-100 cardStyle">'+
 			      	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
 			      	                '<div class="card-body">'+
-			      	                  '<h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">'+item.titulo+'</a></h5>'+
+			      	                  '<h5 class="card-title"><a href="detalleNoticia" class="card-link tet">'+item.titulo+'</a></h5>'+
 			      	                  '<p class="card-text">'+item.descripcion+'</p>'+
 			      	                '</div>'+
 			      	                '<div class="card-footer">'+
@@ -261,7 +263,7 @@ $.getJSON("listaNoticias", function (data){
 			      	              '<div class="card h-100 cardStyle">'+
 			      	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
 			      	                '<div class="card-body">'+
-			      	                  '<h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">'+item.titulo+'</a></h5>'+
+			      	                  '<h5 class="card-title"><a href="detalleNoticia" class="card-link tet">'+item.titulo+'</a></h5>'+
 			      	                  '<p class="card-text">'+item.descripcion+'</p>'+
 			      	                '</div>'+
 			      	                '<div class="card-footer">'+
@@ -286,7 +288,7 @@ $.getJSON("listaNoticias", function (data){
 		              '<div class="card h-100">'+
 		               '<img src='+item.imagen+' class="card-img-top" alt="...">'+
 		                '<div class="card-body">'+
-		                  '<h5 class="card-title"><a href="noticias-sub.html" class="card-link tet">'+item.titulo+'</a></h5>'+
+		                  '<h5 class="card-title"><a href="detalleNoticia" class="card-link tet">'+item.titulo+'</a></h5>'+
 		                  '<p class="card-text">'+item.descripcion+'</p>'+
 		                '</div>'+
 		                '<div class="card-footer">'+

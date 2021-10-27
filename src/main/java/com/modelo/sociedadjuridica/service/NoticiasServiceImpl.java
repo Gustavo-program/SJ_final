@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.modelo.sociedadjuridica.entidad.Noticias;
@@ -50,8 +51,12 @@ public class NoticiasServiceImpl implements NoticiasService{
 
 	@Override
 	public List<Noticias> listaNoticiasPorTipo(int idTipo) {
-		// EN ESPERA
 		return noticiasRepository.listaNoticiasPorTipo(idTipo);
+	}
+
+	@Override
+	public List<Noticias> listaNoticiasDesc(Pageable pageable) {
+		return noticiasRepository.listaNoticiasDesc(pageable);
 	}
 
 }

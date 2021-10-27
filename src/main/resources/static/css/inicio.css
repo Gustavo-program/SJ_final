@@ -1279,3 +1279,18 @@ section {
   color: #076b92;
   text-decoration: underline !important;
 }
+
+/*foto asociados*/
+.cardStyle{
+	
+	width:100%;
+	height:100%;
+}
+.img-card{
+		width:100%;
+		height:230px;
+}
+.card-body{
+	overflow: hidden;/*para que el texto no se salga de su contenido*/
+	height: 220px;
+}

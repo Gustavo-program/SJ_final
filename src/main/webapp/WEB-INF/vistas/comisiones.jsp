@@ -83,36 +83,29 @@
             
             
             
-            <div class=" portfolio-container" >
+            <div class="row portfolio-container" >
             
-            <div class="row">
-	            <div class="col-lg-4 col-md-6 portfolio-item" id="listaTodos">  
-				</div>
-            </div>
-            
-            <!-- 
-            PEQUEÑO COMENTARIO, CADA DIV TIENE UN 4 EN TAMAÑO DE GRILLA, EL TAMAÑO TOTAL ES 12, ENTONCES SI SON 4 ELEMENTOS CON 4 DE GRILLA 
-            OCUPA 16 POR LO QUE EXEDE A LOS 12, POR ENDE NO SE PUEDE VISUALIZAR EL DE MARKETING, PERO SI EN EL FILTRO, SI CAMBIO LA GRILLA
-            A 3 SI SALE PERO DEMASIADO JUNTO, LUEGO VEO LOS ESTILOS.
-             -->
-             <!-- LUEGO TENGO QUE ARREGLAR ESTA WEBA... -->
-            
-             <div class="row">
-	            <div class="col-lg-4 col-md-6 portfolio-item filter-app" id="listaMarketing" >
-				</div>
-            
-            
-            
-	            <div class="col-lg-4 col-md-6 portfolio-item filter-card" id="listaPublicaciones">
+            <div class="row ">
+	            <div class="col-lg-12 col-md-6 portfolio-item" id="listaTodos">  
 				</div>
            
             
-             
-	            <div class="col-lg-4 col-md-6 portfolio-item filter-web" id="listaCursos">
-				</div>
-            </div>
+           
             
-            	
+         
+	            <div class="col-lg-12 col-md-6 portfolio-item filter-app" id="listaMarketing" >
+				</div>
+            
+            
+         
+	            <div class="col-lg-12 col-md-6 portfolio-item filter-card" id="listaPublicaciones">
+				</div>
+       
+            
+          
+	            <div class="col-lg-12 col-md-6 portfolio-item filter-web" id="listaCursos">
+				</div>
+            	</div>
               
             </div>
             
@@ -138,6 +131,7 @@
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
   <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="vendor/purecounter/purecounter.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
  
  
  <!-- Template Main JS File -->

@@ -1,7 +1,9 @@
 package com.modelo.sociedadjuridica.repository;
 
+
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -16,5 +18,11 @@ public interface NoticiasRepository extends JpaRepository<Noticias, Integer> {
 	
 	@Query("Select a from Noticias a where tipo.idTipoNoticias = :idTipo")
 	public abstract List<Noticias> listaNoticiasPorTipo(@Param("idTipo") int idTipoNoticias);
+	
+	
+	
+	@Query("Select a from Noticias a order by a.idNoticias desc")
+	public abstract List<Noticias> listaNoticiasDesc(Pageable pageable);
 
+	
 }
