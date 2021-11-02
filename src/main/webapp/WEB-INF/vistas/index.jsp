@@ -269,7 +269,7 @@
 		                "<img src="+item.imagen+" class='card-img-top img-card' alt='...'>"+
 		                "<div class='card-body'>"+
 		                 " <h5 class='card-title'>"+
-		                 " <a href='detalleNoticia' class='card-link tet'>"+
+		                 " <a href='detalleNoticia?id="+item.idNoticias+"' class='card-link tet'>"+
 		                 item.titulo+
 		                  "</a>"+
 		                  "</h5>"+

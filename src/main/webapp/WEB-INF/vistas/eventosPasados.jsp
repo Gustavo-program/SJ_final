@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -139,7 +139,7 @@
 	              "<img src="+item.foto+" class='card-img-top img-card' alt='...'>"+
 	              "<div class='card-body'>"+
 	                "<h5 class='card-title'>"+
-	              	"<a href='' class='card-link ter'>"+
+	              	"<a href='detalleEventosPasados?id="+item.idEventosPasados+"' class='card-link ter'>"+
 	              	item.titulo+
 	              	"</a>"+
 	              	"</h5>"+

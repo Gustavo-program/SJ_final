@@ -25,4 +25,8 @@ public interface NoticiasRepository extends JpaRepository<Noticias, Integer> {
 	public abstract List<Noticias> listaNoticiasDesc(Pageable pageable);
 
 	
+	/*BUSCAR POR ID*/
+	@Query("Select a from Noticias a where idNoticias = :id")
+	public abstract List<Noticias> listaNoticiasPorId(@Param("id") int cod);
+	
 }

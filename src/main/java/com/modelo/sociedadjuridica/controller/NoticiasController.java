@@ -34,6 +34,11 @@ public class NoticiasController {
 		return noticiasService.listaNoticias();
 	}
 	
+	@ResponseBody
+	@RequestMapping("/listaDetalleNoticias")
+	public List<Noticias> listaDetalleNoticias(int cod){
+		return noticiasService.listaNoticiasPorId(cod);
+	}
 	
 	@ResponseBody
 	@RequestMapping("/listaNoticiasDesc")

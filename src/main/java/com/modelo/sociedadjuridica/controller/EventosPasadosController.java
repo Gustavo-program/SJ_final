@@ -36,6 +36,13 @@ public class EventosPasadosController {
 		return eventPasService.listaEventosPasadosPorTitulo("%"+filtro.trim() + "%");
 	}
 	
+	/*PorID*/
+	
+	@ResponseBody
+	@RequestMapping("/listaDetalleEvenPasados")
+	public List<EventosPasados> listaDetalleEvenPasados(int cod) {
+		return eventPasService.listaEventosPasadosPorId(cod);
+	}
 	
 	
 	//REGISTRO DE OBJETO EVENTOS PASADOS

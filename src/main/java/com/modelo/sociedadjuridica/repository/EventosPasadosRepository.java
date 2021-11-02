@@ -14,5 +14,10 @@ public interface EventosPasadosRepository extends JpaRepository<EventosPasados, 
 	public abstract List<EventosPasados> listaEventosPasadosPorTituloLike(@Param("fil") String filtro);
 	
 	
+	
+	/*BUSCAR POR ID*/
+	@Query("Select a from EventosPasados a where idEventosPasados = :id")
+	public abstract List<EventosPasados> listaEventosPasadosPorId(@Param("id") int cod);
+	
 
 }

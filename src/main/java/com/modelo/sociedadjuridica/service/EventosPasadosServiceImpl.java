@@ -45,6 +45,11 @@ public class EventosPasadosServiceImpl implements EventosPasadosService{
 	public List<EventosPasados> listaEventosPasadosPorRama(int idRama) {
 		return null;/*por mientras estará en null hasta que empieze el lado del usuario*/
 	}
+
+	@Override
+	public List<EventosPasados> listaEventosPasadosPorId(int cod) {
+		return eventPasRepository.listaEventosPasadosPorId(cod);
+	}
 	
 	
 }

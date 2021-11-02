@@ -13,6 +13,11 @@ public class VistasController {
 		return "noticias-sub";
 	}
 	
+	@RequestMapping("/detalleEventosPasados")
+	public String detalleEventosPasados() {
+		return "eventosPasados-sub";
+	}
+	
 	@RequestMapping("/verIndex")
 	public String verIndex() {
 		return "index";

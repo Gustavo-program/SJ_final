@@ -24,5 +24,9 @@ public interface NoticiasService {
 	public abstract List<Noticias> listaNoticiasPorTipo(int idTipo);
 	
 	public abstract List<Noticias> listaNoticiasDesc(Pageable pageable);
+	
+	public abstract List<Noticias> listaNoticiasPorId(int cod);	
+	
+	
 
 }

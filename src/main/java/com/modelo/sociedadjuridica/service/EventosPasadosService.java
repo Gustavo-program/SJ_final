@@ -19,4 +19,5 @@ public interface EventosPasadosService {
 	
 	public abstract List<EventosPasados> listaEventosPasadosPorRama(int idRama);
 	
+	public abstract List<EventosPasados> listaEventosPasadosPorId(int cod);
 }

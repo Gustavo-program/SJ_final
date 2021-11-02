@@ -59,4 +59,9 @@ public class NoticiasServiceImpl implements NoticiasService{
 		return noticiasRepository.listaNoticiasDesc(pageable);
 	}
 
+	@Override
+	public List<Noticias> listaNoticiasPorId(int cod) {
+		return noticiasRepository.listaNoticiasPorId(cod);
+	}
+
 }

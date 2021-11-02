@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -47,19 +47,17 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+      <div class="container" id="id_encabezado">
 
-        <ol>
-          <li><a href="verNoticias">Noticias</a></li>
-          <li>Noticia Nacional</li>
-        </ol>
-        <h2>Derecho Internacional Económico: Temas actuales en comercio, inversión y derecho transnacional</h2>
+       
 
       </div>
     </section><!-- End Breadcrumbs -->
 
     <section class="inner-page">
-      <div class="container">
+      <div class="container" id="id_detelles">
+
+ <!--
 
         <div class="card mb-3">
           <img src="img/hero-bg.jpg" class="card-img-top" alt="...">
@@ -87,10 +85,16 @@
             <hr>
           </div>
         </div>
+        
+         -->
+        
       </div>
     </section>
 
   </main><!-- End #main -->
+  
+  <div >
+  </div>
 
   <jsp:include page="footer.jsp"></jsp:include>
   
@@ -106,8 +110,8 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
-  
- <!-- 
+
+<!--
   <script>
   
   $(document).ready(function() {
@@ -119,7 +123,7 @@
 	   var query = window.location.pathname;
 	   
 	   console.log(query)
-	   var vars = query.split("/");
+	   var vars = query.split("?");
 	   console.log(vars[1])
 	   for (var i=0; i < vars.length; i++) {
 	      // var pair = vars[i].split("=");
@@ -132,7 +136,123 @@
 	}
 
   </script>
- -->
+  -->
+  
+  <script type="text/javascript">
+  
+  
+  $(document).ready(function() {
+	  obtenerId();
+	  /*mostrarData();*/
+	  listaData();
+	  listaEncabezado();
+	  
+	  
+	});
+  
+  
+  function obtenerId() {
+	  
+	  var baseUrl = (window.location).href; 
+	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+	  console.log(numeroId)
+	  
+	  
+  }
+  
+  function listaData(){
+	  var baseUrl = (window.location).href; 
+	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+	  
+	  var fil=numeroId;
+	  $.getJSON("listaDetalleNoticias",{"cod":fil}, function (item){
+		  console.log(item);
+		  
+		  $('#id_detelles').append(
+					
+				  "<div class='card mb-3'>"+
+			      "<img src="+item[0].imagen+" class='card-img-top' id='detimg' alt='...'>"+
+			      "<div class='card-body'>"+
+			        "<p class='card-text'>"+
+			        "<small class='text-muted'>"+
+			        'Actualizado el ' +item[0].fechaRegistro+
+			        "</small>"+
+			        "</p>"+
+			       " <h5 class='card-title tet'>"+
+			       	item[0].titulo+
+			        "</h5>"+
+			        "<hr>"+
+			        "<p class='card-text'>"+
+			        item[0].descripcion+
+			     	"</p>"+
+			       " <hr>"+
+			       " <p>"+
+			          'Compartir en:'+
+			          "<a href='https://www.facebook.com' target='_blank'>"+
+			        "<i class='bx bi-facebook ad'>"+
+			        	"</i>"+
+			        	"</a>"+
+			          "	<a href='https://www.instagram.com' target='_blank'>"+
+			          	"<i class='bx bi-instagram ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			          	"<a href='https://web.whatsapp.com/' target='_blank'>"+
+			          	"<i class='bi bi-whatsapp ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			          	"<a href='#'>"+
+			          	"<i class='bi bi-share ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			        "</p>"+
+			        "<hr>"+
+			     "</div>"+
+			   " </div>	"			
+					
+					);  		
+		  
+  	});
+	  
+  }
+  
+  
+  
+  function listaEncabezado(){
+	  var baseUrl = (window.location).href; 
+	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+	  
+	  var fil=numeroId;
+	  $.getJSON("listaDetalleNoticias",{"cod":fil}, function (item){
+		  console.log(item);
+		  
+			
+		  $('#id_encabezado').append(
+					
+				  "<ol>"+
+		          "<li>"+
+		          "<a href='verNoticias'>"+
+		          'Noticias'+
+		          "</a>"+
+		          "</li>"+
+		          "<li>"+
+		          'Noticia ' +item[0].tipo.nombre+
+		          "</li>"+
+		        "</ol>"+
+		        "<h2>"+
+		        item[0].titulo+
+		        "</h2>"
+					
+					);  	
+		  
+		  
+  	});
+	  
+  }
+  
+ 
+  
+  
+  </script>
 </body>
 
 </html>

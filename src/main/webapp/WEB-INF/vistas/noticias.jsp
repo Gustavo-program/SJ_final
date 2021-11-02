@@ -175,7 +175,7 @@ $.getJSON("listaNoticias", function (data){
 	              '<div class="card h-100 cardStyle">'+
 	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
 	                '<div class="card-body">'+
-	                  '<h5 class="card-title"><a href="detalleNoticia?id=obj.getId()" class="card-link tet">'+item.titulo+'</a></h5>'+
+	                  '<h5 class="card-title"><a href="detalleNoticia?id='+item.idNoticias+'" class="card-link tet">'+item.titulo+'</a></h5>'+
 	                  '<p class="card-text">'+item.descripcion+'</p>'+
 	                '</div>'+
 	                '<div class="card-footer">'+
@@ -232,7 +232,7 @@ $.getJSON("listaNoticias", function (data){
 			      	              '<div class="card h-100 cardStyle">'+
 			      	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
 			      	                '<div class="card-body">'+
-			      	                  '<h5 class="card-title"><a href="detalleNoticia" class="card-link tet">'+item.titulo+'</a></h5>'+
+			      	                  '<h5 class="card-title"><a href="detalleNoticia?id='+item.idNoticias+'" class="card-link tet">'+item.titulo+'</a></h5>'+
 			      	                  '<p class="card-text">'+item.descripcion+'</p>'+
 			      	                '</div>'+
 			      	                '<div class="card-footer">'+
@@ -263,7 +263,7 @@ $.getJSON("listaNoticias", function (data){
 			      	              '<div class="card h-100 cardStyle">'+
 			      	               '<img src='+item.imagen+' class="card-img-top img-card" alt="...">'+
 			      	                '<div class="card-body">'+
-			      	                  '<h5 class="card-title"><a href="detalleNoticia" class="card-link tet">'+item.titulo+'</a></h5>'+
+			      	                  '<h5 class="card-title"><a href="detalleNoticia?id='+item.idNoticias+'" class="card-link tet">'+item.titulo+'</a></h5>'+
 			      	                  '<p class="card-text">'+item.descripcion+'</p>'+
 			      	                '</div>'+
 			      	                '<div class="card-footer">'+
@@ -288,7 +288,7 @@ $.getJSON("listaNoticias", function (data){
 		              '<div class="card h-100">'+
 		               '<img src='+item.imagen+' class="card-img-top" alt="...">'+
 		                '<div class="card-body">'+
-		                  '<h5 class="card-title"><a href="detalleNoticia" class="card-link tet">'+item.titulo+'</a></h5>'+
+		                  '<h5 class="card-title"><a href="detalleNoticia?id='+item.idNoticias+'" class="card-link tet">'+item.titulo+'</a></h5>'+
 		                  '<p class="card-text">'+item.descripcion+'</p>'+
 		                '</div>'+
 		                '<div class="card-footer">'+
