@@ -129,7 +129,7 @@ $.getJSON("listaEventosOtros", function (data){
 		              "<img src="+item.foto+" class='card-img-top img-card' alt='...'>"+
 		              "<div class='card-body'>"+
 		                "<h5 class='card-title'>"+
-		                "<a href='' class='card-link ter'>"+
+		                "<a href='detalleOtros?id="+item.idEventosSco+"' class='card-link ter'>"+
 		                 item.titulo+
 		                "</a>"+
 		                "</h5>"+
@@ -140,7 +140,7 @@ $.getJSON("listaEventosOtros", function (data){
 		                "</p>"+
 		                "<p class='card-text'>"+
 		                "<small class='text-muted'>"+
-		                'hace 3 minutos'+
+		                'Actualizado el ' +item.fechaRegistro+
 		                "</small>"+
 		                "</p>"+
 		              "</div>"+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -8,6 +8,8 @@
   <title>Otros</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
   <!-- Favicons -->
   <link href="img/logo/isotipo.png" rel="icon">
@@ -22,10 +24,9 @@
   <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="css/Otros-sub.css" rel="stylesheet">
+  <link href="css/otros-sub.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: KnightOne - v4.3.0
@@ -37,72 +38,29 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container-fluid">
-
-      <div class="row justify-content-center">
-        <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
-          <!--<h1 class="logo me-auto me-lg-0"><a href="index.html">KnightOne</a></h1>
-           Uncomment below if you prefer to use an image logo -->
-           <a href="index.html" class="logo me-auto me-lg-0"><img src="img/logo/logo transparente original sj blanco.png" alt="" class="img-fluid"></a>
-
-          <nav id="navbar" class="navbar order-last order-lg-0">
-            <ul>
-              <li><a class="nav-link scrollto" href="index.jsp">Inicio</a></li>
-              <li><a class="nav-link scrollto" href="noticias.jsp">Noticias</a></li>
-              <li class="dropdown"><a href="#"><span>Nosotros</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  <li><a href="asociadosExtraordinario.jsp">Asociados Extraordinario</a></li>
-                  <li><a href="consejoEditorial.jsp">Consejo Editorial</a></li>
-                  <li><a href="consejoConsultivo.jsp">Consejo Consultivo</a></li>
-                  <li><a href="comisiones.jsp">Comisiones</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Eventos</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  <li><a href="eventosProximos.jsp">Eventos Próximos</a></li>
-                  <li><a href="eventosPasados.jsp">Eventos Pasados</a></li>
-                  <li><a href="seminario.jsp">Seminarios</a></li>
-                  <li><a href="cursos.jsp">Cursos</a></li>
-                  <li><a href="otros.jsp">Otros</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link scrollto " href="revista.jsp">Revista</a></li>
-              <li><a class="nav-link scrollto" href="postula.jsp">Postula</a></li>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-              </form>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-
-          <!--<a href="#about" class="get-started-btn scrollto">Get Started</a>-->
-        </div>
-      </div>
-
-    </div>
-  </header><!-- End Header -->
+  
+    <jsp:include page="menu-sub.jsp"></jsp:include>
+  
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
+      <div class="container" id="id_encabezado">
+<!-- 
         <ol>
           <li><a href="Seminario.html">Otros</a></li>
           <li>Derecho Penal</li>
         </ol>
         <h2>Derecho Internacional EconÃ³mico: Temas actuales en comercio, inversiÃ³n y derecho transnacional</h2>
-
+ -->
       </div>
     </section><!-- End Breadcrumbs -->
 
     <section class="inner-page">
-      <div class="container">
+      <div class="container" id="id_detalles">
 
+<!-- 
         <div class="card mb-3">
           <div class="card-body">
             <div class="row content">
@@ -125,34 +83,15 @@
             <hr>
           </div>
         </div>
+        
+         -->
+        
       </div>
     </section>
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-   <footer id="footer">
-    <div class="container">
-      <h3>Sociedad Jurídica</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links">
-        <a href="https://www.facebook.com/sociedadjuridica" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/sociedadjuridica/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://youtube.com/user/sjzonainteractiva" class="linkedin"><i class="bi bi-youtube"></i></a>
-        <!--<a href="#" class="linkedin"><img src="../Sociedad Juridica/assets/img/logo/isotipo.png" alt="" width="18px" height="17.6px"></a>-->
-      </div>
-      <div class="copyright">
-        &copy; 2021 Sociedad Jurídica <strong><span></span></strong>. Todos los derechos reservados
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/ -->
-        Sociedad Jurídica <a href="login.jsp">Ingresar</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+ <jsp:include page="footer.jsp"></jsp:include>
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -167,6 +106,110 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+
+
+<script type="text/javascript">
+  
+  
+  $(document).ready(function() {
+	  
+	  listaData();
+	  listaEncabezado();
+	  
+	});
+  
+  function listaEncabezado(){
+	  var baseUrl = (window.location).href; 
+	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+	  
+	  var fil=numeroId;
+	  $.getJSON("listaDetalle",{"cod":fil}, function (item){
+		  console.log(item);
+		  
+			
+		  $('#id_encabezado').append(
+					
+				  "<ol>"+
+		          "<li>"+
+		          "<a href='verOtros'>"+
+		          'Otros'+
+		          "</a>"+
+		          "</li>"+
+		          "<li>"+
+		           item[0].rama.nombre+
+		          "</li>"+
+		        "</ol>"+
+		        "<h2>"+
+		        item[0].titulo+
+		        "</h2>"
+					
+					);  	
+		  
+		  
+  	});
+	  
+  }
+  
+  
+  
+  
+  function listaData(){
+	  var baseUrl = (window.location).href; 
+	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+	  
+	  var fil=numeroId;
+	  $.getJSON("listaDetalle",{"cod":fil}, function (item){
+		  console.log(item);
+		  
+		  $('#id_detalles').append(
+					
+				  "<div class='card mb-3'>"+
+			      "<img src="+item[0].foto+" class='card-img-top' id='detimg' alt='...'>"+
+			      "<div class='card-body'>"+
+			      "<p class='card-text'>"+
+			        "<small class='text-muted'>"+
+			        'Actualizado el ' +item[0].fechaRegistro+
+			        "</small>"+
+			        "</p>"+
+			       "<h5 class='card-title tet'>"+
+			       	item[0].titulo+
+			        "</h5>"+
+			        "<hr>"+
+			        "<p class='card-text'>"+
+			        item[0].descripcion+
+			     	"</p>"+
+			       " <hr>"+
+			       " <p>"+
+			          'Compartir en:'+
+			          "<a href='https://www.facebook.com' target='_blank'>"+
+			        "<i class='bx bi-facebook ad'>"+
+			        	"</i>"+
+			        	"</a>"+
+			          "	<a href='https://www.instagram.com' target='_blank'>"+
+			          	"<i class='bx bi-instagram ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			          	"<a href='https://wa.me/+51953067712' target='_blank'>"+
+			          	"<i class='bi bi-whatsapp ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			          	"<a href='#'>"+
+			          	"<i class='bi bi-share ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			        "</p>"+
+			        "<hr>"+
+			     "</div>"+
+			   " </div>	"			
+					
+					);  		
+		  
+  	});
+	  
+  }
+  
+  </script>
+
 
 </body>
 

@@ -104,6 +104,7 @@
 								<th style="width: 5%">ID</th>
 								<th style="width: 20%">Título</th>
 								<th style="width: 20%">Descripción</th>
+								<th style="width: 15%">Fecha de Registro</th>
 								<th style="width: 15%">Tipo</th>
 								<th style="width: 15%">Rama</th>
 								<th style="width: 15%">Foto</th>
@@ -442,6 +443,7 @@
 	       				{data: "idEventosSco"},
 	       				{data: "titulo"},
 	       				{data: "descripcion"},
+	       				{data: "fechaRegistro"},
 	       				{data: "tipoSco.nombre"},
 	       				{data: "rama.nombre"},
 	       				{data: function(row, type, val, meta){

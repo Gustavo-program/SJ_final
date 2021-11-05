@@ -205,7 +205,7 @@
 			          	"<i class='bx bi-instagram ad'>"+
 			          	"</i>"+
 			          	"</a>"+
-			          	"<a href='https://wa.me/+51923620790' target='_blank'>"+
+			          	"<a href='https://wa.me/+51953067712' target='_blank'>"+
 			          	"<i class='bi bi-whatsapp ad'>"+
 			          	"</i>"+
 			          	"</a>"+

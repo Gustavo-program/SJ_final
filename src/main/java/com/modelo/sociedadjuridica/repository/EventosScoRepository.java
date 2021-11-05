@@ -23,5 +23,8 @@ public interface EventosScoRepository extends JpaRepository<EventosSco, Integer>
 	@Query("Select s from EventosSco s where tipoSco = 3" )
 	public abstract List<EventosSco> listaEOtros();
 	
+	
+	@Query("Select a from EventosSco a where idEventosSco = :id")
+	public abstract List<EventosSco> listaEventosScoPorId(@Param("id") int cod);
 
 }

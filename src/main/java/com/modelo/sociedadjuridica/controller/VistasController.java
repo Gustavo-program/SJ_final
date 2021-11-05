@@ -18,6 +18,21 @@ public class VistasController {
 		return "eventosPasados-sub";
 	}
 	
+	@RequestMapping("/detalleSeminario")
+	public String detalleSeminario() {
+		return "seminario-sub";
+	}
+	
+	@RequestMapping("/detalleCursos")
+	public String detalleCursos() {
+		return "cursos-sub";
+	}
+	
+	@RequestMapping("/detalleOtros")
+	public String detalleOtros() {
+		return "otros-sub";
+	}
+	
 	@RequestMapping("/verIndex")
 	public String verIndex() {
 		return "index";

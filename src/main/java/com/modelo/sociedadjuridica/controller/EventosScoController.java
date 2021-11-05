@@ -1,5 +1,6 @@
 package com.modelo.sociedadjuridica.controller;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +29,13 @@ public class EventosScoController {
 	@RequestMapping("/listaEventosSco")
 	public List<EventosSco> listaEventosSco(){
 		return eventosScoService.listaEventosSco();
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping("/listaDetalle")
+	public List<EventosSco> listaDetalle(int cod){
+		return eventosScoService.listaEventosScoPorId(cod);
 	}
 	
 	
@@ -87,7 +95,7 @@ public class EventosScoController {
 			
 			obj.setTitulo(titulo);
 			obj.setDescripcion(descripcion);
-			
+			obj.setFechaRegistro(new Date());///fecha de registro
 			obj.setTipoSco(tipo);
 			obj.setRama(rama);
 			
@@ -139,6 +147,7 @@ public class EventosScoController {
 			obj.setIdEventosSco(Integer.parseInt(idEventosSco)); //AQUI PARSEAS SI ES QUE HAY ERROR
 			obj.setTitulo(nombre);
 			obj.setDescripcion(descripcion);
+			obj.setFechaRegistro(new Date());/*faltaba poner esto en el actualizar*/
 			obj.setTipoSco(tipoSco);
 			obj.setRama(rama);
 			obj.setFoto(foto);

@@ -33,7 +33,8 @@ public interface EventosScoService {
 	
 	public abstract List<EventosSco> listaEventosScoPorRama(int idRama);
 	
-	public abstract List<EventosSco> listaEventosScoPorTipo(int idTipoSco);
+	public abstract List<EventosSco> listaEventosScoPorTipo(int idTipoSco);	
 	
+	public abstract List<EventosSco> listaEventosScoPorId(int cod);	
 	
 }

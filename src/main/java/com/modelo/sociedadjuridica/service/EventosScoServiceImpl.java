@@ -68,4 +68,9 @@ public class EventosScoServiceImpl implements EventosScoService{
 		return eventosScoRepository.listaEOtros();
 	}
 
+	@Override
+	public List<EventosSco> listaEventosScoPorId(int cod) {
+		return eventosScoRepository.listaEventosScoPorId(cod);
+	}
+
 }

@@ -815,3 +815,14 @@ section {
   color: #076b92;
   text-decoration: underline !important;
 }
+
+
+.card{
+	width: 80%;
+	margin:auto;
+}
+
+#detimg{
+	height: 600px !important;
+	
+}

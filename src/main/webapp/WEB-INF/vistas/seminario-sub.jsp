@@ -48,24 +48,26 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+      <div class="container" id="id_encabezado">
 
+<!-- 
         <ol>
           <li><a href="Seminario.html">Seminarios</a></li>
           <li>Derecho Penal</li>
         </ol>
         <h2>Derecho Internacional Económico: Temas actuales en comercio, inversión y derecho transnacional</h2>
-
+ -->
       </div>
     </section><!-- End Breadcrumbs -->
 
     <section class="inner-page">
-      <div class="container">
+      <div class="container" id="id_detelles">
 
+<!-- 
         <div class="card mb-3">
           <div class="card-body">
             <div class="row content">
-              <img src="assets/img/img6.png" alt="" width="100%">
+              <img src="assets/img/img6.png" alt="..." width="100%">
               <p class="card-text"><small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small></p>
               <h5 class="card-title tet">Derecho Internacional Económico: Temas actuales en comercio, inversión y derecho transnacional</h5><hr>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ex possimus at cum, ratione quae voluptates, qui error ut quaerat nesciunt iusto. Quo neque deserunt molestias mollitia nobis. Ducimus, distinctio.
@@ -84,6 +86,8 @@
             <hr>
           </div>
         </div>
+         -->
+        
       </div>
     </section>
 
@@ -109,12 +113,102 @@
   <script type="text/javascript">
   
   
+  $(document).ready(function() {
+	  
+	  listaData();
+	  listaEncabezado();
+	  
+	});
+  
+  function listaEncabezado(){
+	  var baseUrl = (window.location).href; 
+	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+	  
+	  var fil=numeroId;
+	  $.getJSON("listaDetalle",{"cod":fil}, function (item){
+		  console.log(item);
+		  
+			
+		  $('#id_encabezado').append(
+					
+				  "<ol>"+
+		          "<li>"+
+		          "<a href='verSeminarios'>"+
+		          'Seminarios'+
+		          "</a>"+
+		          "</li>"+
+		          "<li>"+
+		           item[0].rama.nombre+
+		          "</li>"+
+		        "</ol>"+
+		        "<h2>"+
+		        item[0].titulo+
+		        "</h2>"
+					
+					);  	
+		  
+		  
+  	});
+	  
+  }
   
   
   
   
-  
-  
+  function listaData(){
+	  var baseUrl = (window.location).href; 
+	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+	  
+	  var fil=numeroId;
+	  $.getJSON("listaDetalle",{"cod":fil}, function (item){
+		  console.log(item);
+		  
+		  $('#id_detelles').append(
+					
+				  "<div class='card mb-3'>"+
+			      "<img src="+item[0].foto+" class='card-img-top' id='detimg' alt='...'>"+
+			      "<div class='card-body'>"+
+			      "<p class='card-text'>"+
+			        "<small class='text-muted'>"+
+			        'Actualizado el ' +item[0].fechaRegistro+
+			        "</small>"+
+			        "</p>"+
+			       "<h5 class='card-title tet'>"+
+			       	item[0].titulo+
+			        "</h5>"+
+			        "<hr>"+
+			        "<p class='card-text'>"+
+			        item[0].descripcion+
+			     	"</p>"+
+			       " <hr>"+
+			       " <p>"+
+			          'Compartir en:'+
+			          "<a href='https://www.facebook.com' target='_blank'>"+
+			        "<i class='bx bi-facebook ad'>"+
+			        	"</i>"+
+			        	"</a>"+
+			          "	<a href='https://www.instagram.com' target='_blank'>"+
+			          	"<i class='bx bi-instagram ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			          	"<a href='https://wa.me/+51953067712' target='_blank'>"+
+			          	"<i class='bi bi-whatsapp ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			          	"<a href='#'>"+
+			          	"<i class='bi bi-share ad'>"+
+			          	"</i>"+
+			          	"</a>"+
+			        "</p>"+
+			        "<hr>"+
+			     "</div>"+
+			   " </div>	"			
+					
+					);  		
+		  
+  	});
+	  
+  }
   
   </script>
   
