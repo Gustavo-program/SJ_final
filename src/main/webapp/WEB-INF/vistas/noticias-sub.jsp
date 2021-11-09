@@ -166,6 +166,8 @@
 	  
 	  var fil=numeroId;
 	  $.getJSON("listaDetalleNoticias",{"cod":fil}, function (item){
+		  let enter = item[0].descripcion.replace(/\n/g, "<br>");
+		  
 		  console.log(item);
 		  
 		  $('#id_detelles').append(
@@ -183,7 +185,7 @@
 			        "</h5>"+
 			        "<hr>"+
 			        "<p class='card-text'>"+
-			        item[0].descripcion+
+			        enter+
 			     	"</p>"+
 			       " <hr>"+
 			       " <p>"+

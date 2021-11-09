@@ -1,6 +1,6 @@
 <jsp:include page="intranetValida.jsp" />
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -238,6 +238,7 @@
 		 window.onload=function listar(){
 	        	$.getJSON("listaEventosSco", function (listado){
 	        		agregarGrilla(listado);
+	        		console.log(listado);
 	        	});
 	        	
 	        }
@@ -346,7 +347,8 @@
 	    	    	 
 	    	        <!-- EDITAR DATOS DE EVENTOS -->
 	    	    	function editar(id,titulo,descripcion,tipo,rama,foto){	
-	    	    		
+	    	    		let desEnter = descripcion.replace(/\n/g, "\n");
+	    	    		console.log(desEnter);
 	    	    		$('#id').val(id);
 	    	    		$('#id_titulo').val(titulo);
 	    	    		$('#id_descripcion').val(descripcion);
@@ -357,6 +359,7 @@
 	    	    		
 	    	    		
 	    	    		$('#id_modal_actualiza').modal("show");
+	    	    		
 
 	    	    	}
 	    	 
@@ -442,7 +445,13 @@
 	       			columns:[
 	       				{data: "idEventosSco"},
 	       				{data: "titulo"},
-	       				{data: "descripcion"},
+						{data: function(row, type, val, meta){
+							
+	    					var salida = row.descripcion
+	    					return salida;
+	    					
+	    				},className:'text-center'},
+	       				/*{data: "descripcion"},*/
 	       				{data: "fechaRegistro"},
 	       				{data: "tipoSco.nombre"},
 	       				{data: "rama.nombre"},
@@ -453,7 +462,7 @@
 	    				},className:'text-center'},
 	       				
 	       				{data: function(row, type, val, meta){
-	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idEventosSco + '\',\'' + row.titulo + '\',\'' + row.descripcion+ '\',\'' +row.tipoSco.idTipoSco+ '\',\'' +row.rama.idRama+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
+	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idEventosSco + '\',\'' + row.titulo + '\',\'' + row.descripcion.replace(/\n/g, "\\r") + '\',\'' +row.tipoSco.idTipoSco+ '\',\'' +row.rama.idRama+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
 	       					
 	       				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
 	       					return salida;

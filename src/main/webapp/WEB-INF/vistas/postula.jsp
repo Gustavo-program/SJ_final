@@ -127,13 +127,13 @@
             
             
             
-            <!--  
-            <div class="mb-3 form-check">
+            
+            <div class="mb-3 form-group">
               <input type="checkbox" class="form-check-input" id="check" required>
               <label class="form-check-label" for="check">Acepto los términos & condiciones</label>
             </div>
             
-            -->
+            
             <a href="#"><button id="id_registrar" type="button" class="btn btn-primary" >Enviar</button></a>
             
             </form>
@@ -376,6 +376,14 @@
 										}
 									}
 								},
+								check : {
+									selector : '#check',
+									validators : {
+										notEmpty : {
+											message : 'Acepte los teminos y condiciones'
+										}
+									}
+								}
 
 							}
 						});

@@ -416,7 +416,7 @@
 	    				},className:'text-center'},
 	       				
 	       				{data: function(row, type, val, meta){
-	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idEventosPasados + '\',\'' + row.titulo + '\',\'' + row.descripcion+ '\',\'' +row.fecha+ '\',\'' +row.rama.idRama+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
+	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idEventosPasados + '\',\'' + row.titulo + '\',\'' + row.descripcion.replace(/\n/g, "\\r") + '\',\'' +row.fecha+ '\',\'' +row.rama.idRama+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
 	       					
 	       				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
 	       					return salida;

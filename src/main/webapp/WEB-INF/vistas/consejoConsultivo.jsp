@@ -116,7 +116,8 @@
  <script type="text/javascript">
   
   $.getJSON("listaNosotrosConsultivo", function (data){				
-		$.each(data, function(index,item){             
+		$.each(data, function(index,item){
+			let enter = item.descripcion.replace(/\n/g, "<br>");
 			$('#nosotros-consultivo').append(
 					"<div class='col'>"+
 					"<div class='card cardStyle'>"+
@@ -129,7 +130,7 @@
 						item.sexo+
 						"</p>"+
 						"<p class='card-text'>"+
-						item.descripcion+
+						enter+
 						"</p>"+
 					"</div>"+
 					"</div>"+

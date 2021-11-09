@@ -411,7 +411,7 @@
        				
        				{data: "tipoNosotros.nombre"},
        				{data: function(row, type, val, meta){
-       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idNosotros + '\',\'' + row.nombre + '\',\'' + row.descripcion+ '\',\'' +row.sexo+ '\',\'' +row.tipoNosotros.idTipoNosotros+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
+       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idNosotros + '\',\'' + row.nombre + '\',\'' + row.descripcion.replace(/\n/g, "\\r") + '\',\'' +row.sexo+ '\',\'' +row.tipoNosotros.idTipoNosotros+ '\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
        					
        				    <!--var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idAlumno + '\')">Eliminar</button>';-->
        					return salida;

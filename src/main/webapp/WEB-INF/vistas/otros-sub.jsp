@@ -100,7 +100,6 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
   <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
   <script src="vendor/purecounter/purecounter.js"></script>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
@@ -159,6 +158,7 @@
 	  
 	  var fil=numeroId;
 	  $.getJSON("listaDetalle",{"cod":fil}, function (item){
+		  let enter = item[0].descripcion.replace(/\n/g, "<br>");
 		  console.log(item);
 		  
 		  $('#id_detalles').append(
@@ -176,7 +176,7 @@
 			        "</h5>"+
 			        "<hr>"+
 			        "<p class='card-text'>"+
-			        item[0].descripcion+
+			        enter+
 			     	"</p>"+
 			       " <hr>"+
 			       " <p>"+

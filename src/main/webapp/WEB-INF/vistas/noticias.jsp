@@ -281,7 +281,7 @@ $.getJSON("listaNoticias", function (data){
 		 })
 	
 	
-		 
+		/* 
 		 function armarTarjeta(item){
 			 
 			 $('#listaNoticias').append('<div class="col">'+
@@ -298,7 +298,7 @@ $.getJSON("listaNoticias", function (data){
 		            '</div>');
 		 }
 
-
+*/
 </script>
 
 
