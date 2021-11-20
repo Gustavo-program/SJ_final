@@ -4,10 +4,15 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="cliente")
@@ -31,6 +36,21 @@ public class Cliente implements Serializable {
 	private String correo;
 	
 	private String telefono;
+	
+	
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "evento")
+	private EventosProximos eventosProximos;
+
+	
+	public EventosProximos getEventosProximos() {
+		return eventosProximos;
+	}
+
+	public void setEventosProximos(EventosProximos eventosProximos) {
+		this.eventosProximos = eventosProximos;
+	}
 
 	public int getIdCliente() {
 		return idCliente;

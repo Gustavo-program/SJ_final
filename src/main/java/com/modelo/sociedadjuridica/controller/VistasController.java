@@ -33,6 +33,11 @@ public class VistasController {
 		return "otros-sub";
 	}
 	
+	@RequestMapping("/detalleEventosProximos")
+	public String detalleEventosProximos() {
+		return "eventosProximo-sub";
+	}
+	
 	@RequestMapping("/verIndex")
 	public String verIndex() {
 		return "index";

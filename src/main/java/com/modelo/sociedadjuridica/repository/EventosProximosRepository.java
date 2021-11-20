@@ -13,4 +13,9 @@ public interface EventosProximosRepository extends JpaRepository<EventosProximos
 	@Query("Select a from EventosProximos a where titulo like :fil")
 	public abstract List<EventosProximos> listaEventosProximosPorTituloLike(@Param("fil") String filtro);
 	
+	
+
+	/*BUSCAR POR ID*/
+	@Query("Select a from EventosProximos a where idEventosProximos = :id")
+	public abstract List<EventosProximos> listaEventosProximosPorId(@Param("id") int cod);
 }

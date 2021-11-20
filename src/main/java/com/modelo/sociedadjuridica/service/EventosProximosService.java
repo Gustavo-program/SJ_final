@@ -17,5 +17,7 @@ public abstract List<EventosProximos> listaEventosProximos();
 	
 	public abstract List<EventosProximos> listaEventosProximosPorTitulo(String filtro);
 	
+	public abstract List<EventosProximos> listaEventosProximosPorId(int cod);
+	
 
 }

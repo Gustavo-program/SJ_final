@@ -137,7 +137,7 @@
 		             "<img src="+item.foto+" class='card-img-top img-card' alt='...'>"+
 		              "<div class='card-body'>"+
 		                "<h5 class='card-title'>"+
-		              "<a href='' class='card-link ter'>"+
+		              "<a href='detalleEventosProximos?id="+item.idEventosProximos+"' class='card-link ter'>"+
 		              item.titulo+
 		              "</a>"+
 		              "</h5>"+

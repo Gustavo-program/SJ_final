@@ -36,6 +36,11 @@ public class EventosProximosController {
 		return eventProxService.listaEventosProximosPorTitulo("%"+filtro.trim() + "%");
 	}
 	
+	@ResponseBody
+	@RequestMapping("/listaDetalleEvenProximo")
+	public List<EventosProximos> listaDetalleEvenProximo(int cod) {
+		return eventProxService.listaEventosProximosPorId(cod);
+	}
 	
 
 	//REGISTRO DE OBJETO EVENTOS PROXIMOS

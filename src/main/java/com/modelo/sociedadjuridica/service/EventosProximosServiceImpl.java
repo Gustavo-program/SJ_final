@@ -44,4 +44,9 @@ public class EventosProximosServiceImpl implements EventosProximosService {
 		return eventProxRepository.listaEventosProximosPorTituloLike(filtro);
 	}
 
+	@Override
+	public List<EventosProximos> listaEventosProximosPorId(int cod) {
+		return eventProxRepository.listaEventosProximosPorId(cod);
+	}
+
 }

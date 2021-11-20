@@ -41,4 +41,10 @@ public class ClienteServiceImpl implements ClienteService{
 		return clienteRespository.consultaEntradas(filtro);
 	}
 
+	@Override
+	public List<Cliente> buscaPorEvento(int evento) {
+		// En espera
+		return null;
+	}
+
 }

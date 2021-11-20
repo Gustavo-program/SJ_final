@@ -15,5 +15,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer>{
 	/*BUSQUEDA POR NOMBRE*/
 	@Query("Select a from Cliente a where nombre like :fil or apePaterno like :fil or apeMaterno like :fil")
 	public abstract List<Cliente> consultaEntradas(@Param("fil") String filtro);
-
+	
+	/* BUSQUEDA POR NOMBRE DE EVENTO*/
+	
 }

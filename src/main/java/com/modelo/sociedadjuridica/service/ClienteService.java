@@ -15,5 +15,8 @@ public interface ClienteService {
 	public abstract List<Cliente> consultaEntradas(String filtro);
 	
 	
+	public abstract List<Cliente> buscaPorEvento(int evento);
+	
+	
 
 }

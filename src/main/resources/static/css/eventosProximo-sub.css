@@ -821,3 +821,18 @@ section {
   color: #076b92;
   text-decoration: underline !important;
 }
+
+.card{
+	width: 80%;
+	margin:auto;
+}
+
+
+#detimg{
+	height: 600px !important;
+	position: relative;
+	top: -15px;
+	padding: 0px;
+	
+	
+}
