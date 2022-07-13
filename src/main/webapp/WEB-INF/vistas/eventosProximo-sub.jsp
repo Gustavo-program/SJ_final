@@ -9,7 +9,6 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
   <!-- Favicons -->
   <link href="img/logo/isotipo.png" rel="icon">
@@ -19,23 +18,28 @@
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
+    
 
+<!-- Template Main JS File -->
+	
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
   <!-- Vendor CSS Files -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrapValidator.css"/>
+
 
   <!-- Template Main CSS File -->
   <link href="css/eventosProximo-sub.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: KnightOne - v4.3.0
-  * Template URL: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
@@ -47,13 +51,9 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container" id="id_encabezado">
-<!--  
-        <ol>
-          <li><a href="Eventos proximos.html">Eventos Pr贸ximos</a></li>
-          <li>Informaci贸n</li>
-        </ol>
-        <h2>Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</h2>
--->
+
+		<!-- Encabezado -->
+		
       </div>
     </section><!-- End Breadcrumbs -->
 
@@ -72,93 +72,48 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     
+                    
                     <form id="form-reg" method="post" enctype="multipart/form-data">
-                    
-                    
                     <div class="modal-body">
                     
-                    <div class="mb-3" id="ponerid">
+                    <div class="form-group mb-3" id="poneridEvento">
                          <!--<input type='text' class='form-control' id='id_evento' placeholder='id' value='hola'>  -->
                       </div>
                     
                     
-                    
-                      <div class="mb-3">
+                      <div class="form-group mb-3">
                         <label for="formGroupExampleInput" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre">
+                        <input type="text" class="form-control" name="nombres" id="id_reg_nombres" placeholder="Nombre">
                       </div>
-                      <div class="mb-3">
+                      <div class="form-group mb-3">
                         <label for="formGroupExampleInput" class="form-label">Apellido Paterno</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Apellido Paterno">
+                        <input type="text" class="form-control" name="apePaterno" id="id_reg_apePaterno" placeholder="Apellido Paterno">
                       </div>
-                      <div class="mb-3">
+                      <div class="form-group mb-3">
                         <label for="formGroupExampleInput" class="form-label">Apellido Materno</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Apellido Materno">
+                        <input type="text" class="form-control" name="apeMaterno" id="id_reg_apeMaterno" placeholder="Apellido Materno">
                       </div>
-                      <div class="mb-3">
+                      <div class="form-group mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Correo Electr髇ico</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo Electr髇ico">
+                        <input type="email" class="form-control" name="correo" id="id_reg_correo" placeholder="Correo Electr髇ico">
                       </div>
-                      <div class="mb-3">
+                      <div class="form-group mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Tel閒ono</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tel閒ono">
+                        <input type="text" class="form-control" name="telefono" id="id_reg_telefono" placeholder="Tel閒ono">
                       </div>
                     </div>
                     
                     
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-success">Enviar</button>
+                      <button type="button" id="id_registrar" class="btn btn-success">Enviar</button>
                     </div>
                     
                     </form>
                   </div>
                 </div>
               </div>
-              
-              
- <!-- 
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="row content">
-              <img src="assets/img/img6.png" alt="..." width="100%">
-              <p class="card-text"><small class="text-muted">Actualizado el 07/02/2020 06:39 p.m.</small></p>
-              <h5 class="card-title tet">Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional</h5><hr>
-
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ex possimus at cum, ratione quae
-                voluptates, qui error ut quaerat nesciunt iusto. Quo neque deserunt molestias mollitia nobis. Ducimus,
-                distinctio.
-                Ratione sunt, rem ab corporis ex quia fuga repellendus ut nemo culpa suscipit! Corrupti, ducimus
-                suscipit! Unde facere eveniet praesentium nisi itaque, enim distinctio cupiditate. Dicta ut assumenda
-                officia omnis.
-                Illo laborum, non eveniet quisquam qui dolor ut placeat quae et, vitae voluptate, deleniti facilis sed
-                laudantium minima laboriosam voluptatibus natus? Provident, quas architecto repellat minus unde
-                repudiandae dolores dolorem.
-              </p>
-              
-              
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Comprar Entrada
-              </button>
-
-             
-
-            </div>
-            <hr>
-            <p>
-              Compartir en:
-              <a href="#"><i class="bx bi-facebook ad"></i></a>
-              <a href="#"><i class="bx bi-instagram ad"></i></a>
-              <a href="#"><i class="bi bi-whatsapp ad"></i></a>
-              <a href="#"><i class="bi bi-share ad"></i></a>
-            </p>
-            <hr>
-          </div>
-        </div>
-        
-        
-         -->
-        
+                     
         
       </div>
     </section>
@@ -167,41 +122,37 @@
   
 <jsp:include page="footer.jsp"></jsp:include>
 
-  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/purecounter/purecounter.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="js/main.js"></script>
 
+	
+	
+	<script type="text/javascript" src="js/bootstrapValidator.js"></script>
+	
 <script type="text/javascript">
   
 
   
   
   $(document).ready(function() {
-	  obtenerId();
-	  listaEncabezado();
+	  //obtenerId();
+	 listaEncabezado();
 	 listaData();
 	 incluirID();
 	  
 	});
   
- function obtenerId() {
+/* function obtenerId() {
 	  
 	  var baseUrl = (window.location).href; 
 	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
 	  return numeroId;
 	  
   }
-  
+ 
+ */
  
  function listaEncabezado(){
 	  var baseUrl = (window.location).href; 
@@ -247,12 +198,9 @@
 		  console.log(item);
 		  
 			
-		  $('#ponerid').append(
-					
-				  "<input type='text' class='form-control' id='id_evento' value='"+item[0].titulo+"' readonly>"
-				
-					);  	
-		  
+		  $('#poneridEvento').append(
+				  "<input type='text' class='form-control' id='id_reg_evento' name='eventos' value='"+item[0].titulo+"' readonly> <input type='hidden' class='form-control' id='reg_evento_id' name='eventosProximos' value='"+item[0].idEventosProximos+"' readonly>"
+					);
 		  
 	});
 	  
@@ -328,11 +276,157 @@
 	  
  }
  
- 
- 
- 
- 
- 
+
+	$("#id_registrar").click(function(e){
+		e.preventDefault();
+		
+		var validator = $('#form-reg').data('bootstrapValidator');
+		validator.validate();
+		
+		
+		if (validator.isValid()){	
+		  var formData=new FormData();
+		  
+		  
+		  
+		  formData.append("nombres", $("#id_reg_nombres").val());
+		  formData.append("apePaterno", $("#id_reg_apePaterno").val());
+		  formData.append("apeMaterno", $("#id_reg_apeMaterno").val());
+		  formData.append("correo", $("#id_reg_correo").val());
+		  formData.append("telefono", $("#id_reg_telefono").val());
+		  formData.append("eventosProximos", $("#reg_evento_id").val());
+		  
+		  
+	      $.ajax({
+	        type: "POST",
+	        url: "insertaClientes",
+	        data: formData,
+	        contentType: false,
+	        processData: false,
+	        cache: false,
+	        success: function(data){
+	        	mostrarMensaje(data.MENSAJE);
+	        	
+	        	limpiar();
+	        	validator.resetForm();
+	        	$('#exampleModal').modal("hide");
+	        },
+	        error: function(){
+	        	mostrarMensaje(MSG_ERROR);
+	        }
+	      });
+	      
+		return false;	
+		
+		};
+		return false;
+	});
+	function limpiar(){				
+
+  		
+  		$('#id_reg_nombres').val('');
+  		$('#id_reg_apePaterno').val('');
+  		$('#id_reg_apeMaterno').val('');
+  		$('#id_reg_correo').val('');
+  		$('#id_reg_telefono').val('');
+  		
+  	}
+	
+	  $('#exampleModal').on('hide.bs.modal', function (e) {
+      	var validator = $('#form-reg').data('bootstrapValidator');
+        	validator.validate();
+      	
+          validator.resetForm();
+          limpiar();
+      	
+      }); 
+	
+	$('#form-reg').bootstrapValidator(
+			{
+				message : 'This value is not valid',
+				feedbackIcons : {
+					valid : 'glyphicon glyphicon-ok',
+					invalid : 'glyphicon glyphicon-remove',
+					validating : 'glyphicon glyphicon-refresh'
+				},
+				fields : {
+					nombres : {
+						selector : '#id_reg_nombres',
+						validators : {
+							notEmpty : {
+								message : 'ingrese su nombre completo'
+							},
+							stringLength : {
+								message : 'El nombre es de 5 a 100 caracteres',
+								min : 5,
+								max : 100
+							}
+						}
+					},
+
+					apePaterno : {
+						selector : '#id_reg_apePaterno',
+						validators : {
+							notEmpty : {
+								message : 'Ingrese su apellido Paterno'
+							},
+							stringLength : {
+								message : 'El apellido paterno es de 5 a 25 caracteres',
+								min : 5,
+								max : 25
+							}
+							
+						}
+					},
+					apeMaterno : {
+						selector : '#id_reg_apeMaterno',
+						validators : {
+							notEmpty : {
+								message : 'Ingrese su apellido Materno'
+							},
+							stringLength : {
+								message : 'El apellido materno es de 5 a 25 caracteres',
+								min : 5,
+								max : 25
+							}
+							
+						}
+					},
+					
+
+					correo : {
+						selector : '#id_reg_correo',
+						validators : {
+							notEmpty : {
+								message : 'Ingrese su correo electr髇ico'
+							},
+							emailAddress : {
+								message : 'El correo no es v醠ido'
+							}
+						}
+					},
+					
+					telefono : {
+						selector : '#id_reg_telefono',
+						validators : {
+							notEmpty : {
+								message : 'Ingrese su n鷐ero de tel閒ono'
+							},
+							digits: {
+	                    		message:"Ingrese solo n鷐eros/ "
+	                  		},
+							stringLength : {
+								message : 'El n鷐ero de tel閒ono es de 9 caracteres',
+								min : 9,
+								max : 9
+							}
+							
+						}
+					}
+
+				}
+			});
+	
  
   </script>
 
