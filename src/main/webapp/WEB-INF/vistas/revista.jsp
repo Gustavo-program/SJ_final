@@ -9,6 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <!-- Favicons -->
   <link href="img/logo/isotipo.png" rel="icon">
   <link href="img/logo/isotipo.png" rel="apple-touch-icon">
@@ -65,7 +67,9 @@
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="row content">
+        <div class="row content" id="listaRevista">
+        
+        <!--  
           <div class="col-lg-10">
             <div class="card mb-3">
               <div class="row g-0">
@@ -83,45 +87,11 @@
               </div>
             </div>
           </div>
+          -->
+          
         </div>
-        <div class="row content">
-          <div class="col-lg-10">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-md-4 fot">
-                  <img src="assets/img/imagen1.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title"><a href="#" class="card-link tet">Derecho Internacional Económico: Temas actuales en comercio, inversión y derecho transnacional</a></h5>
-                    <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
-                    <p class="card-text">Núm. 85 (2020)</p>
-                    <p class="card-text">Para descargar la revista completa en PDF <a href="#" class="card-link"><button type="button" class="btn btn-outline-danger"><i class="bi bi-file-pdf"></i> PDF</button></a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row content">
-          <div class="col-lg-10">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-md-4 fot">
-                  <img src="assets/img/imagen1.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title"><a href="#" class="card-link tet">Derecho Internacional Económico: Temas actuales en comercio, inversión y derecho transnacional</a></h5>
-                    <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
-                    <p class="card-text">Núm. 85 (2020)</p>
-                    <p class="card-text">Para descargar la revista completa en PDF <a href="#" class="card-link"><button type="button" class="btn btn-outline-danger"><i class="bi bi-file-pdf"></i> PDF</button></a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        
 
       </div>
       <nav aria-label="Page navigation example">
@@ -154,8 +124,60 @@
   <script src="vendor/purecounter/purecounter.js"></script>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
+ 
+   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+  
+  
+  <script type="text/javascript">
+  
+  
+  $.getJSON("listaRevista", function (data){				
+		$.each(data, function(index,item){      
+			$('#listaRevista').append(
+					
+					"<div class='col-lg-10'>"+
+		            "<div class='card mb-3'>"+
+		              "<div class='row g-0'>"+
+		               "<div class='col-md-4 fot'>"+
+		                  "<img src="+item.foto+" class='img-fluid rounded-start' id='foto-revista' alt='...'>"+
+		                "</div>"+
+		                "<div class='col-md-8'>"+
+		                 "<div class='card-body'>"+
+		                   "<h5 class='card-title'>"+
+		                  "<a href='detalleRevista?id="+item.idrevistas+"' class='card-link tet'>"+
+		                  		item.titulo+
+		                  	"</a>"+
+		                  	"</h5>"+
+		                    "<p class='card-text'>"+
+		                  	"</p>"+
+		                    "<p class='card-text'>"+
+		                  		item.anno+
+		                  	"</p>"+
+		                    "<p class='card-text'>"+
+		                  		"Para descargar la revista completa en PDF "+
+		                  	"<a href="+item.pdf+" target='_blank' class='card-link'>"+
+		                    "<button type='button' class='btn btn-outline-danger'>"+
+		                    "<i class='bi bi-file-pdf'>"+
+		                    "</i>"+
+		                    " PDF"+
+		                    "</button>"+
+		                    "</a>"+
+		                    "</p>"+
+		                  "</div>"+
+		                "</div>"+
+		              "</div>"+
+		            "</div>"+
+		          "</div>"
+					
+					
+					);  			
+		});
+
+	});
+  
+  </script>
+   
 
 </body>
 

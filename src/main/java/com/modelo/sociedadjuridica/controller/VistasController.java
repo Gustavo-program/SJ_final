@@ -8,6 +8,11 @@ public class VistasController {
 	
 	//vistas para el cliente
 	
+	@RequestMapping("/detalleRevista")
+	public String detalleRevista() {
+		return "revista-sub";
+	}
+	
 	@RequestMapping("/detalleNoticia")
 	public String detalleNoticia() {
 		return "noticias-sub";

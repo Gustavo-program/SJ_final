@@ -28,6 +28,12 @@ public class RevistaController {
 		return revistaService.listaRevista();
 	}
 	
+	@ResponseBody
+	@RequestMapping("/listaDetalleRevista")
+	public List<Revista> listaDetalleRevista(int cod) {
+		return revistaService.listaRevistaPorId(cod);
+	}
+	
 	
 	//REGISTRO DE OBJETO REVISTA
 		@ResponseBody

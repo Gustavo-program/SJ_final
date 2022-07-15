@@ -15,5 +15,7 @@ public abstract List<Revista> listaRevista();
 	
 	public abstract void eliminaRevista(int id);
 	
+	public abstract List<Revista> listaRevistaPorId(int cod);
+	
 
 }

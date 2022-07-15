@@ -11422,3 +11422,7 @@ label svg{
 .cardHome{
  text-align: center;
 }
+
+.pdftabla{
+    max-width: 250px !important;
+}

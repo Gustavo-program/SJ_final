@@ -95,19 +95,19 @@
                                </div> 
                             </div>
                             <div class="card-body">
-                                <table id="id_table" class="table table-hover table-light table-striped text-center table-bordered">
+                                <table id="id_table" class="table table-hover table-light table-striped table-bordered text-center">
 
                                     
 						<thead class="table-dark">
 							<tr class="text-center">
 					
 								<th style="width: 5%">ID</th>
-								<th style="width: 15%">Título</th>
-								<th style="width: 15%">Año</th>
-								<th style="width: 15%">Descripción</th>
+								<th style="width: 30%">Título</th>
+								<th style="width: 5%">Año</th>
+								<th style="width: 10%">Descripción</th>
 								<th style="width: 10%">PDF</th>
-								<th style="width: 15%">Rama</th>
-								<th style="width: 15%">Foto</th>
+								<th style="width: 5%">Rama</th>
+								<th style="width: 10%">Foto</th>
 								<th style="width: 5%">Editar</th>
 								<th style="width: 5%">Eliminar</th>		
 								
@@ -173,7 +173,7 @@
                                     
                                     <div class="col-lg-8 col-md-6 portfolio-item">
                                       <div class="card-body">
-                                      <input class="form-control" id="id" name="idrevistas" maxlength="8" type=""/>
+                                      <input class="form-control" id="id" name="idrevistas" maxlength="8" type="hidden"/>
                                         <div class="form-group mt-3">
                                                 <input type="text" class="form-control" name="titulo" id="id_titulo" placeholder="Título" required>
                                               </div>
@@ -403,7 +403,7 @@
 	       				{data: function(row, type, val, meta){
 	    					var salida="<a href="+row.pdf+" target='_blank'><g>"+row.pdf+"</g></a>";
 	    					return salida;
-	    				},className:'table-sm m-5 table-borderless  caption-top'},
+	    				},className:'pdftabla table-sm m-5 table-borderless caption-top',styleName:'max-width: 100px !important;'},
 	       				{data: "rama.nombre"},
 	       				{data: function(row, type, val, meta){
 	    					
@@ -411,7 +411,7 @@
 	    					return salida;
 	    				},className:'text-center'},
 	       				
-	    					{data: function(row, type, val, meta){
+	    				{data: function(row, type, val, meta){
 	       					var salida='<button class="table-btn-crud" id="botoneditar" data-bs-toggle="modal" data-bs-target="#id_modal_actualiza" onclick="editar(\''+row.idrevistas + '\',\'' + row.titulo + '\',\'' + row.anno + '\',\'' +  row.descripcion.replace(/\n/g, "\\r") + '\',\'' +row.pdf+ '\',\'' +row.rama.idRama+'\',\'' +row.foto+'\')" ><i class="bi bi-pencil"></i></button>';
 	       				    
 	       					return salida;

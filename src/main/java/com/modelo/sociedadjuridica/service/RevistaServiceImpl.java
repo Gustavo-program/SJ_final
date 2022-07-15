@@ -36,4 +36,9 @@ public class RevistaServiceImpl implements RevistaService{
 		
 	}
 
+	@Override
+	public List<Revista> listaRevistaPorId(int cod) {
+		return revistaRepository.listaRevistaPorId(cod);
+	}
+
 }
