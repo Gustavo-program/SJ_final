@@ -147,7 +147,11 @@
 	          			columns:[
 	          				{data: "idCliente"},
 	          				{data: "eventosProximos.titulo"},
-	          				{data: "nombres"},
+	          				{data: function(row, type, val, meta){
+		    					var salida=""+row.nombres+" "+row.apePaterno+" "+row.apeMaterno+"";
+		    					return salida;
+		    				},className:'table-sm m-5 table-borderless  caption-top'},
+	          				
 	          				{data: "correo"},
 	          				{data: "telefono"},
 	          					
