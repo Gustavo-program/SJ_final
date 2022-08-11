@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Intranet- Slider</title>
+        <title>Intranet- Articulo</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/login.css" rel="stylesheet" />
         <!-- Favicons -->
@@ -34,15 +34,15 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Slider</h1>
+                        <h1 class="mt-4">Articulo</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="verInicio">Inicio</a></li>
-                            <li class="breadcrumb-item active">Slider</li>
+                            <li class="breadcrumb-item active">Articulo</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body t2">
                                 <i class="bi bi-file-earmark"></i>
-                                <a href="verCrearSlider" class="t2">Crear Slider</a>
+                                <a href="verCrearArticulo" class="t2">Crear Articulo</a>
                             </div>
                         </div>
                         <div class="card mb-4">

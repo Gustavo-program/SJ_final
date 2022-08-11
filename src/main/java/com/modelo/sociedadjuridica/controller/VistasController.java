@@ -138,6 +138,21 @@ public class VistasController {
 	}
 	
 	
+	
+	  
+	 @RequestMapping("/verArticulo")
+	public String verArticulo() {
+		return "articulo";
+	}
+	
+	
+	@RequestMapping("/verCrearArticulo")
+	public String verCrearArticulo() {
+		return "articulo-crear";
+	}
+	  
+	  
+	/*
 	@RequestMapping("/verSlider")
 	public String verSlider() {
 		return "slider";
@@ -148,7 +163,7 @@ public class VistasController {
 	public String verCrearSlider() {
 		return "slider-crear";
 	}
-	
+	*/
 	
 	@RequestMapping("/verIntraNoticias")
 	public String verIntraNoticias() {
