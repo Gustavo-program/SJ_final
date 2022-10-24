@@ -61,45 +61,39 @@
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
-      <div class="container" id="id_detalles">
-<!--
-          <div class="section-title">
-            <h2>Derecho Internacional Econ贸mico: Temas actuales en comercio, inversi贸n y derecho transnacional - N煤m. 86 (2021)</h2>
-            <p class="card-text">Para descargar la revista completa en PDF <a href="#" class="card-link"><button type="button" class="btn btn-outline-danger"><i class="bi bi-file-pdf"></i> PDF</button></a>            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-book"></i>
-              Comprar
-            </button>
-            </p>
-           
-          </div>
-
-
-        <div class="row content">
-          <div class="col-lg-2 pt-4 pt-lg-0">
-            <img src="assets/img/imagen1.jpg" alt="" width="100%">
-          </div>
-          <div class="col-lg-10">
+    <div class="container">
     
-            <div class="mb-3">
-              <div class="section-title2">
-                <h2>Secci贸n Principal</h2>
-              </div>
-              <div class="col-lg-9">
-                <ul>
-                  <li>
-                    <h5>El art铆culo XXI del GATT y la agresi贸n: hacia una interpretaci贸n compatible con la unidad del orden jur铆dico internacional</h5>
-                    <p>1-10 p谩g.</p>
-                    <p class="card-text"><a href="#" class="card-link"><button type="button" class="btn btn-outline-danger"><i class="bi bi-file-pdf"></i> PDF</button></a></p>
-                  </li>
-                </ul>
-              </div>
-             
-            </div>
-
-          </div>        
-        </div>
-          -->
+    <div class="row">
+    
+    <div class="col-md-6" id="id_detalles">   
+    </div>
+    
+    
+    <div class="col-md-6">
         
-      </div>
+           	<div class="mb-3">
+           		<div class="section-title2">
+           			<h2>ART虲ULOS</h2>
+				</div>
+				<div class="col-lg-9" id="id_articulo">  
+		 		</div>
+			</div>
+
+         </div> 
+    
+    </div>
+    	
+      	
+      	
+      	
+      
+      	
+    </div>
+      
+      
+      
+        
+      
     </section><!-- End About Us Section -->
 
   </main><!-- End #main -->
@@ -114,7 +108,6 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
   <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
   <script src="vendor/purecounter/purecounter.js"></script>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
@@ -125,8 +118,10 @@
   
  $(document).ready(function() {
 	  
-	  listaData();
+	  
 	  listaEncabezado();
+	  listaData();
+	  listaArticulos();
 	  
 	});
  
@@ -164,6 +159,50 @@
  }
  
  
+ function listaArticulos(){
+	  var baseUrl = (window.location).href; 
+	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+	  
+	  var fil=numeroId;
+	  $.getJSON("listaDetalleArticulo",{"cod":fil}, function (item){
+		  console.log(item);
+		  console.log(item.length);
+		  
+			
+		  for (var i = 0; i < item.length; i++) {
+			   $('#id_articulo').append(
+						
+					   "<ul>"+
+		                  "<li>"+
+		                    "<h5>"+
+		                    item[i].titulo+
+		                    "</h5>"+
+		                    "<p>"+
+		                    item[i].paginas+
+		                    "</p>"+
+		                    "<p class='card-text'>"+
+		                    "<a href="+item[i].pdf+" target='_blank' class='card-link'>"+
+		                    "<button type='button' class='btn btn-outline-danger'>"+
+		                    "<i class='bi bi-file-pdf'>"+
+		                    "</i>"+
+		                    "PDF"+
+		                    "</button>"+
+		                    "</a>"+
+		                    "</p>"+
+		                  "</li>"+
+		                "</ul>"
+						
+						);  	
+			}
+		  
+		 
+		  
+		  
+	});
+	  
+}
+ 
+ 
  function listaData(){
 	  var baseUrl = (window.location).href; 
 	  var numeroId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
@@ -183,7 +222,7 @@
 		            "Para descargar la revista completa en PDF "+
 		            
 		            "<a href="+item[0].pdf+" target='_blank' class='card-link'>"+
-		            "<button type='button' class='btn btn-outline-danger'>"+
+		            "<button type='button' class='btn btn-outline-danger' style='margin-right: 5px;'>"+
 		            "<i class='bi bi-file-pdf'>"+
 		            "</i>"+
 		            "PDF"+
@@ -200,42 +239,10 @@
 		          "</div>"+
 
 		        "<div class='row content'>"+
-		          "<div class='col-lg-2 pt-4 pt-lg-0'>"+
+		          "<div class='col-lg-6 pt-4 pt-lg-0' style='margin-left: 5%;'>"+
 		            "<img src="+item[0].foto+" alt='' width='100%'>"+
 		          "</div>"+
-		          "<div class='col-lg-10'>"+
-		    
-		           " <div class='mb-3'>"+
-		            "  <div class='section-title2'>"+
-		                "<h2>"+
-		                "Secci髇 Principal"+
-		                "</h2>"+
-		              "</div>"+
-		              "<div class='col-lg-9'>"+
-		                "<ul>"+
-		                  "<li>"+
-		                    "<h5>"+
-		                   enter+
-		                    "</h5>"+
-		                    "<p>"+
-		                    "1-10 pag."+
-		                    "</p>"+
-		                    "<p class='card-text'>"+
-		                    "<a href='#' class='card-link'>"+
-		                    "<button type='button' class='btn btn-outline-danger'>"+
-		                    "<i class='bi bi-file-pdf'>"+
-		                    "</i>"+
-		                    "PDF"+
-		                    "</button>"+
-		                    "</a>"+
-		                    "</p>"+
-		                  "</li>"+
-		                "</ul>"+
-		              "</div>"+
-		             
-		            "</div>"+
 
-		          "</div>"+
 		        "</div>"
 					
 					);  		

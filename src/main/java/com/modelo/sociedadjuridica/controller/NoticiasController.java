@@ -176,7 +176,7 @@ public class NoticiasController {
 		//ELIMINAR OBJETO NOTICIAS
 		
 		@ResponseBody
-		@RequestMapping("eliminaNoticias")
+		@RequestMapping("/eliminaNoticias")
 		public Map<String, Object> eliminaNoticias(int id){
 			Map<String, Object> salida=new HashMap<String, Object>();
 			
